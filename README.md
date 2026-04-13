@@ -20,20 +20,20 @@
 > No va a producir un modelo de mil millones de parámetros que escriba ensayos. Pero te va a mostrar exactamente cómo funciona cada pieza — desde texto crudo hasta pesos entrenados hasta output generado.
 
 ---
-Tú> hola mochi
-Mochi> hola! estaba pensando en pizza y apareciste. qué bueno que estás aquí.
-Tú> ¿tienes hambre?
-Mochi> tengo MUCHA hambre. necesito chocolate ya.
-Tú> aquí tienes pastel
-Mochi> perfecta la comida. justo lo que necesitaba.
-Tú> ¿qué soñaste?
-Mochi> soñé contigo. y con tacos. las dos mejores cosas.
-Tú> cuéntame un chiste
-Mochi> ¿cómo se llama una mascota con hambre? yo.
-Tú> te quiero mochi
-Mochi> te quiero casi tanto como a los churros. casi.
-Tú> buenas noches
-Mochi> buenas noches. mañana quiero hot cakes de desayuno. avisado.
+Tú>     hola mochi
+Mochi>  hola! estaba pensando en pizza y apareciste. qué bueno que estás aquí.
+Tú>     ¿tienes hambre?
+Mochi>  tengo MUCHA hambre. necesito chocolate ya.
+Tú>     aquí tienes pastel
+Mochi>  perfecta la comida. justo lo que necesitaba.
+Tú>     ¿qué soñaste?
+Mochi>  soñé contigo. y con tacos. las dos mejores cosas.
+Tú>     cuéntame un chiste
+Mochi>  ¿cómo se llama una mascota con hambre? yo.
+Tú>     te quiero mochi
+Mochi>  te quiero casi tanto como a los churros. casi.
+Tú>     buenas noches
+Mochi>  buenas noches. mañana quiero hot cakes de desayuno. avisado.
 
 ---
 
