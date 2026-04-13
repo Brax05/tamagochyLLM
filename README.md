@@ -116,27 +116,27 @@ python -m mascotalm chat      # habla con Mochi
 
 ---
 
-## Estructura del proyecto
+##  Estructura del proyecto
+
+```text
 mascotaLLM/
 ├── mascotalm/
 │   ├── config.py          # Hiperparámetros (MascotaConfig, TrainConfig)
-│   ├── model.py           # Transformer (MascotaLM)
-│   ├── dataset.py         # Carga de datos y batching
+│   ├── model.py           # Arquitectura Transformer (MascotaLM)
+│   ├── dataset.py         # Lógica de carga de datos y batching
 │   ├── train.py           # Loop de entrenamiento
-│   ├── inference.py       # Chat con Mochi (MascotaInference)
+│   ├── inference.py       # Clase de inferencia para chat
 │   ├── generate_data.py   # Generador del dataset sintético
-│   ├── prepare_data.py    # Genera datos + entrena tokenizer BPE
-│   └── main.py        # Punto de entrada CLI
+│   ├── prepare_data.py    # Generación de datos + Tokenizer BPE
+│   └── main.py            # Punto de entrada CLI
 ├── tools/
-│   ├── export_dataset.py  # Sube dataset a HuggingFace
-│   ├── export_model.py    # Exporta modelo a HuggingFace
-│   └── export_onnx.py     # Exporta a ONNX cuantizado uint8
-├── train_mascotalm.ipynb  # Notebook para entrenar en Colab
-├── use_mascotalm.ipynb    # Notebook para chatear en Colab
-├── requirements.txt
-└── setup.py
-
----
+│   ├── export_dataset.py  # Subida a HuggingFace Dataset Hub
+│   ├── export_model.py    # Subida de pesos a HuggingFace Model Hub
+│   └── export_onnx.py     # Exportación a ONNX cuantizado (uint8)
+├── train_mascotalm.ipynb  # Notebook para entrenar en Google Colab
+├── use_mascotalm.ipynb    # Notebook para probar el chat en Colab
+├── requirements.txt       # Dependencias del proyecto
+└── setup.py               # Configuración de instalación del paquete
 
 ## Decisiones de diseño
 
