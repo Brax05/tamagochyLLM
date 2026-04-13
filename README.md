@@ -18,7 +18,7 @@
 > Sin doctorado. Sin cluster de GPUs. Un notebook de Colab, unos minutos, y tienes un LLM funcionando que construiste desde cero — generación de datos, tokenizer, arquitectura, loop de entrenamiento e inferencia. Si puedes correr un notebook, puedes entrenar un modelo de lenguaje.
 >
 > No va a producir un modelo de mil millones de parámetros que escriba ensayos. Pero te va a mostrar exactamente cómo funciona cada pieza — desde texto crudo hasta pesos entrenados hasta output generado.
-
+```text
 ---
 Tú>     hola mochi
 Mochi>  hola! estaba pensando en pizza y apareciste. qué bueno que estás aquí.
@@ -36,7 +36,7 @@ Tú>     buenas noches
 Mochi>  buenas noches. mañana quiero hot cakes de desayuno. avisado.
 
 ---
-
+```
 ## ¿Qué es MascotaLM?
 
 MascotaLM es un modelo de lenguaje pequeño que simula ser una mascota virtual llamada Mochi. Habla en frases cortas y minúsculas sobre comida, juegos, cariño y su mundo digital. No entiende conceptos humanos complejos como impuestos, el trabajo o las redes sociales — y no lo intenta.
