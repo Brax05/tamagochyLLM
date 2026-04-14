@@ -1,0 +1,26 @@
+# Entorno virtual
+.venv/
+
+# Modelos entrenados (archivos grandes)
+checkpoints/
+*.pt
+*.bin
+
+# Datos de entrenamiento
+data/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Claude memory
+.claude/
