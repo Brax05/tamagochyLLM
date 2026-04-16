@@ -1,8 +1,16 @@
 # ── Generated data & models ─────────────────────────────────
-data/
+data/*
+
+!data/
+!data/tokenizer.json
+
 dataset/
-checkpoints/
-*.pt
+checkpoints/*
+
+!checkpoints/
+!checkpoints/best_model.pt
+!checkpoints/config.json
+
 *.bin
 *.onnx
 

@@ -17,11 +17,11 @@ import re
 #  RUTAS DEL MODELO
 # ======================================================
 BASE_DIR   = os.path.dirname(os.path.abspath(__file__))
-LLM_DIR    = os.path.join(BASE_DIR, "mascotaLLM")
-CHECKPOINT = os.path.join(LLM_DIR, "checkpoints", "best_model.pt")
-TOKENIZER  = os.path.join(LLM_DIR, "data", "tokenizer.json")
+LLM_DIR    = BASE_DIR
+CHECKPOINT = os.path.join(BASE_DIR, "checkpoints", "best_model.pt")
+TOKENIZER  = os.path.join(BASE_DIR, "data", "tokenizer.json")
 
-sys.path.insert(0, LLM_DIR)
+sys.path.insert(0, BASE_DIR)
 
 # ======================================================
 #  AUTO-DETECCION DEL ENTORNO VIRTUAL
