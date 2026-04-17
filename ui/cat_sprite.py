@@ -13,10 +13,10 @@ import math
 import random
 import pygame
 
-WINDOW_SCALE = 8
+WINDOW_SCALE = 4          # ← era 8, reducido para pantalla 320x480
 SPRITE_SIZE = 32
-SURFACE_WIDTH = SPRITE_SIZE * WINDOW_SCALE
-SURFACE_HEIGHT = SPRITE_SIZE * WINDOW_SCALE
+SURFACE_WIDTH = SPRITE_SIZE * WINDOW_SCALE    # = 128
+SURFACE_HEIGHT = SPRITE_SIZE * WINDOW_SCALE   # = 128
 
 BLACK = (0, 0, 0)
 WHITE = (245, 245, 245)
@@ -197,7 +197,7 @@ class CatAnimator:
         self.breath_time = 0.0
         self.breath_speed = 0.040
         self.breath_amplitude = 0.5
-        self.breath_offset = 0.0  # float puro, sin redondear
+        self.breath_offset = 0.0
 
     def set_mode(self, mode):
         self.mode = mode
@@ -216,10 +216,9 @@ class CatAnimator:
     def update(self):
         self.breath_time += self.breath_speed
 
-        # Seno suavizado en los extremos, float puro sin int()
         raw = math.sin(self.breath_time)
         smoothed = math.copysign(abs(raw) ** 0.6, raw)
-        self.breath_offset = smoothed * self.breath_amplitude  # nunca se redondea
+        self.breath_offset = smoothed * self.breath_amplitude
 
         if self.mode == "sleep":
             return

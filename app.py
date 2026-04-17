@@ -8,6 +8,7 @@ Responsable de:
 - Actualizar la mascota según la emoción
 
 Orquesta toda la aplicación.
+Adaptado para pantalla 320x480.
 """
 
 import threading
@@ -29,17 +30,17 @@ FG_CYAN = "#00bfff"
 FG_GRAY = "#888888"
 FG_WHITE = "#ffffff"
 
-FONT_MONO = ("Courier New", 11)
-FONT_TITLE = ("Courier New", 12, "bold")
-TYPEWRITER_DELAY_MS = 20
+FONT_MONO = ("Courier New", 8)          # ← era 11
+FONT_TITLE = ("Courier New", 9, "bold") # ← era 12
+TYPEWRITER_DELAY_MS = 15                # ← era 20
 
 
 class MochiApp(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title("[ MOCHI - Mascota Virtual ]")
-        self.geometry("760x900")
-        self.resizable(True, True)
+        self.title("[ MOCHI ]")
+        self.geometry("320x480")        # ← era "760x900"
+        self.resizable(False, False)    # ← era (True, True)
         self.configure(bg=BG_MAIN)
 
         self.engine = MochiEngine()
@@ -57,14 +58,14 @@ class MochiApp(tk.Tk):
     def _build_ui(self):
         tk.Label(
             self,
-            text="[ MOCHI - MASCOTA VIRTUAL ]",
+            text="[ MOCHI ]",
             font=FONT_TITLE,
             bg=BG_MAIN,
             fg=FG_GREEN,
-        ).pack(pady=(10, 4))
+        ).pack(pady=(4, 2))
 
         visual_frame = tk.Frame(self, bg=BG_PANEL)
-        visual_frame.pack(padx=16, pady=(0, 6), fill="x")
+        visual_frame.pack(padx=6, pady=(0, 2), fill="x")
 
         self.cat_canvas = tk.Canvas(
             visual_frame,
@@ -73,45 +74,20 @@ class MochiApp(tk.Tk):
             bg="black",
             highlightthickness=0,
         )
-        self.cat_canvas.pack(padx=8, pady=8)
+        self.cat_canvas.pack(padx=4, pady=4)
 
         self.state_label = tk.Label(
             self,
             text="[ NEUTRAL ]",
-            font=("Courier New", 10),
+            font=("Courier New", 8),
             bg=BG_MAIN,
             fg=FG_GRAY,
         )
-        self.state_label.pack(pady=(0, 4))
+        self.state_label.pack(pady=(0, 2))
 
-        log_frame = tk.Frame(self, bg=BG_PANEL)
-        log_frame.pack(padx=16, pady=(2, 4), fill="both", expand=False)
-
-        self.chat_log = tk.Text(
-            log_frame,
-            font=FONT_MONO,
-            bg=BG_PANEL,
-            fg=FG_GREEN,
-            insertbackground=FG_GREEN,
-            wrap="word",
-            state="disabled",
-            relief="flat",
-            padx=6,
-            pady=6,
-            cursor="arrow",
-        )
-
-        sb = tk.Scrollbar(log_frame, command=self.chat_log.yview)
-        self.chat_log.configure(yscrollcommand=sb.set)
-        sb.pack(side="right", fill="y")
-        self.chat_log.pack(side="left", fill="both", expand=True)
-
-        self.chat_log.tag_configure("user", foreground=FG_CYAN)
-        self.chat_log.tag_configure("mochi", foreground=FG_GREEN)
-        self.chat_log.tag_configure("system", foreground=FG_GRAY)
-
+        # ← PRIMERO el bottom, para que expand=True del log no lo tape
         bottom = tk.Frame(self, bg=BG_MAIN)
-        bottom.pack(padx=16, pady=(0, 12), fill="x")
+        bottom.pack(side="bottom", padx=6, pady=(0, 6), fill="x")
 
         self.input_var = tk.StringVar()
         self.input_field = tk.Entry(
@@ -123,20 +99,47 @@ class MochiApp(tk.Tk):
             insertbackground=FG_WHITE,
             relief="flat",
         )
-        self.input_field.pack(side="left", fill="x", expand=True, ipady=6, padx=(0, 8))
+        self.input_field.pack(side="left", fill="x", expand=True, ipady=4, padx=(0, 4))
         self.input_field.bind("<Return>", self._on_send)
 
         self.send_btn = tk.Button(
             bottom,
-            text="ENVIAR",
-            font=("Courier New", 11, "bold"),
+            text=">>",
+            font=("Courier New", 8, "bold"),
             bg=FG_GREEN,
             fg=BG_MAIN,
             relief="flat",
             cursor="hand2",
             command=self._on_send,
         )
-        self.send_btn.pack(side="right", ipady=6, ipadx=10)
+        self.send_btn.pack(side="right", ipady=4, ipadx=6)
+
+        # ← LUEGO el log, ahora puede expandirse libremente
+        log_frame = tk.Frame(self, bg=BG_PANEL)
+        log_frame.pack(padx=6, pady=(2, 2), fill="both", expand=True)
+
+        self.chat_log = tk.Text(
+            log_frame,
+            font=FONT_MONO,
+            bg=BG_PANEL,
+            fg=FG_GREEN,
+            insertbackground=FG_GREEN,
+            wrap="word",
+            state="disabled",
+            relief="flat",
+            padx=4,
+            pady=4,
+            cursor="arrow",
+        )
+
+        sb = tk.Scrollbar(log_frame, command=self.chat_log.yview, width=8)
+        self.chat_log.configure(yscrollcommand=sb.set)
+        sb.pack(side="right", fill="y")
+        self.chat_log.pack(side="left", fill="both", expand=True)
+
+        self.chat_log.tag_configure("user", foreground=FG_CYAN)
+        self.chat_log.tag_configure("mochi", foreground=FG_GREEN)
+        self.chat_log.tag_configure("system", foreground=FG_GRAY)
 
     def _init_pygame_surface(self):
         if not self._pygame_initialized:
@@ -146,21 +149,17 @@ class MochiApp(tk.Tk):
     def _draw_cat(self):
         surface = self.cat.get_surface()
 
-        # Convertir superficie pygame a imagen PIL
         raw_str = pygame.image.tostring(surface, "RGB")
         img = Image.frombytes("RGB", (SURFACE_WIDTH, SURFACE_HEIGHT), raw_str)
 
-        # Offset flotante puro para subpixel rendering
         offset_y = self.cat.breath_offset * WINDOW_SCALE
 
         offset_int = int(offset_y)
         frac = offset_y - offset_int
 
-        # Frame A: desplazado al píxel entero más cercano
         final_img = Image.new("RGB", (SURFACE_WIDTH, SURFACE_HEIGHT), (0, 0, 0))
         final_img.paste(img, (0, offset_int))
 
-        # Frame B: desplazado un píxel más, mezclado por la fracción
         if abs(frac) > 0.001:
             shifted = Image.new("RGB", (SURFACE_WIDTH, SURFACE_HEIGHT), (0, 0, 0))
             shifted.paste(img, (0, offset_int + (1 if frac > 0 else -1)))
