@@ -13,6 +13,7 @@ import math
 import random
 import pygame
 
+WINDOW_SCALE = 4   
 SPRITE_SIZE = 32
 SURFACE_WIDTH = SPRITE_SIZE * WINDOW_SCALE    
 SURFACE_HEIGHT = SPRITE_SIZE * WINDOW_SCALE   
