@@ -13,10 +13,9 @@ import math
 import random
 import pygame
 
-WINDOW_SCALE = 4          # ← era 8, reducido para pantalla 320x480
 SPRITE_SIZE = 32
-SURFACE_WIDTH = SPRITE_SIZE * WINDOW_SCALE    # = 128
-SURFACE_HEIGHT = SPRITE_SIZE * WINDOW_SCALE   # = 128
+SURFACE_WIDTH = SPRITE_SIZE * WINDOW_SCALE    
+SURFACE_HEIGHT = SPRITE_SIZE * WINDOW_SCALE   
 
 BLACK = (0, 0, 0)
 WHITE = (245, 245, 245)

@@ -30,17 +30,17 @@ FG_CYAN = "#00bfff"
 FG_GRAY = "#888888"
 FG_WHITE = "#ffffff"
 
-FONT_MONO = ("Courier New", 8)          # ← era 11
-FONT_TITLE = ("Courier New", 9, "bold") # ← era 12
-TYPEWRITER_DELAY_MS = 15                # ← era 20
+FONT_MONO = ("Courier New", 8)          
+FONT_TITLE = ("Courier New", 9, "bold") 
+TYPEWRITER_DELAY_MS = 15                
 
 
 class MochiApp(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("[ MOCHI ]")
-        self.geometry("320x480")        # ← era "760x900"
-        self.resizable(False, False)    # ← era (True, True)
+        self.geometry("320x480")       
+        self.resizable(False, False)    
         self.configure(bg=BG_MAIN)
 
         self.engine = MochiEngine()
@@ -85,7 +85,6 @@ class MochiApp(tk.Tk):
         )
         self.state_label.pack(pady=(0, 2))
 
-        # ← PRIMERO el bottom, para que expand=True del log no lo tape
         bottom = tk.Frame(self, bg=BG_MAIN)
         bottom.pack(side="bottom", padx=6, pady=(0, 6), fill="x")
 
@@ -114,7 +113,6 @@ class MochiApp(tk.Tk):
         )
         self.send_btn.pack(side="right", ipady=4, ipadx=6)
 
-        # ← LUEGO el log, ahora puede expandirse libremente
         log_frame = tk.Frame(self, bg=BG_PANEL)
         log_frame.pack(padx=6, pady=(2, 2), fill="both", expand=True)
 
