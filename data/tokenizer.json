@@ -1,0 +1,9992 @@
+{
+  "version": "1.0",
+  "truncation": null,
+  "padding": null,
+  "added_tokens": [
+    {
+      "id": 0,
+      "content": "<pad>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 1,
+      "content": "<|im_start|>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 2,
+      "content": "<|im_end|>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    }
+  ],
+  "normalizer": null,
+  "pre_tokenizer": {
+    "type": "ByteLevel",
+    "add_prefix_space": false,
+    "trim_offsets": true,
+    "use_regex": true
+  },
+  "post_processor": {
+    "type": "ByteLevel",
+    "add_prefix_space": true,
+    "trim_offsets": false,
+    "use_regex": true
+  },
+  "decoder": {
+    "type": "ByteLevel",
+    "add_prefix_space": true,
+    "trim_offsets": true,
+    "use_regex": true
+  },
+  "model": {
+    "type": "BPE",
+    "dropout": null,
+    "unk_token": null,
+    "continuing_subword_prefix": null,
+    "end_of_word_suffix": null,
+    "fuse_unk": false,
+    "byte_fallback": false,
+    "ignore_merges": false,
+    "vocab": {
+      "<pad>": 0,
+      "<|im_start|>": 1,
+      "<|im_end|>": 2,
+      "!": 3,
+      ",": 4,
+      ".": 5,
+      ":": 6,
+      "<": 7,
+      ">": 8,
+      "?": 9,
+      "A": 10,
+      "C": 11,
+      "H": 12,
+      "M": 13,
+      "T": 14,
+      "U": 15,
+      "_": 16,
+      "a": 17,
+      "b": 18,
+      "c": 19,
+      "d": 20,
+      "e": 21,
+      "f": 22,
+      "g": 23,
+      "h": 24,
+      "i": 25,
+      "j": 26,
+      "k": 27,
+      "l": 28,
+      "m": 29,
+      "n": 30,
+      "o": 31,
+      "p": 32,
+      "q": 33,
+      "r": 34,
+      "s": 35,
+      "t": 36,
+      "u": 37,
+      "v": 38,
+      "w": 39,
+      "x": 40,
+      "y": 41,
+      "z": 42,
+      "|": 43,
+      "¡": 44,
+      "©": 45,
+      "±": 46,
+      "³": 47,
+      "º": 48,
+      "¿": 49,
+      "Â": 50,
+      "Ã": 51,
+      "Ċ": 52,
+      "Ġ": 53,
+      "Ń": 54,
+      "im": 55,
+      "<|": 56,
+      "|>": 57,
+      "st": 58,
+      "sta": 59,
+      "en": 60,
+      "rt": 61,
+      "end": 62,
+      "start": 63,
+      "er": 64,
+      "as": 65,
+      "si": 66,
+      "nt": 67,
+      "ser": 68,
+      "stant": 69,
+      "user": 70,
+      "assi": 71,
+      "assistant": 72,
+      ".<|": 73,
+      "es": 74,
+      "Ġm": 75,
+      "qu": 76,
+      "Ġp": 77,
+      "Ġc": 78,
+      "Ġa": 79,
+      "Ġt": 80,
+      "Ġd": 81,
+      "ra": 82,
+      "ÃŃ": 83,
+      "os": 84,
+      "Ġe": 85,
+      "do": 86,
+      "Ġqu": 87,
+      "or": 88,
+      "Ã©": 89,
+      "Ġs": 90,
+      "Â¿": 91,
+      "Ġl": 92,
+      "Ġes": 93,
+      "ci": 94,
+      "?<|": 95,
+      "ent": 96,
+      "al": 97,
+      "re": 98,
+      "Ġco": 99,
+      "an": 100,
+      "Ġest": 101,
+      "Ġme": 102,
+      "Ã¡": 103,
+      "Ġn": 104,
+      "Ġde": 105,
+      "da": 106,
+      "ha": 107,
+      "ho": 108,
+      "Ġb": 109,
+      "em": 110,
+      "Ġy": 111,
+      "ero": 112,
+      "me": 113,
+      "mi": 114,
+      "Ġv": 115,
+      "gra": 116,
+      "Ġque": 117,
+      "ien": 118,
+      "Ã³": 119,
+      "oy": 120,
+      "ro": 121,
+      "Ġf": 122,
+      "te": 123,
+      "go": 124,
+      "ue": 125,
+      "ta": 126,
+      "ste": 127,
+      "Ġmi": 128,
+      "eres": 129,
+      "Ġno": 130,
+      "le": 131,
+      "Ġha": 132,
+      "Ġmu": 133,
+      "uen": 134,
+      "quÃ©": 135,
+      "Ġsi": 136,
+      "Ġte": 137,
+      "graci": 138,
+      "la": 139,
+      "gracias": 140,
+      "Ã±": 141,
+      "Ġbien": 142,
+      "to": 143,
+      "gu": 144,
+      "emp": 145,
+      "jor": 146,
+      "ri": 147,
+      "ch": 148,
+      "Ġpa": 149,
+      "mb": 150,
+      "Ġqui": 151,
+      "co": 152,
+      "Ġmejor": 153,
+      "mo": 154,
+      "ec": 155,
+      "un": 156,
+      "Ã¡s": 157,
+      "empre": 158,
+      "Ġcu": 159,
+      "Ġlo": 160,
+      "Ġse": 161,
+      "Ġcon": 162,
+      "cu": 163,
+      "Ġmis": 164,
+      "Ġpero": 165,
+      "sÃŃ": 166,
+      "quÃŃ": 167,
+      "est": 168,
+      "ga": 169,
+      "ÃŃa": 170,
+      "ĠestÃ¡": 171,
+      "on": 172,
+      "in": 173,
+      "ve": 174,
+      "Ġmo": 175,
+      "tas": 176,
+      "ando": 177,
+      "Ġquiero": 178,
+      "mos": 179,
+      "Ġca": 180,
+      "cho": 181,
+      "Ġdi": 182,
+      "Ġpor": 183,
+      "Ġpara": 184,
+      "chi": 185,
+      "ento": 186,
+      "Ġmuy": 187,
+      "Ġta": 188,
+      "Ġen": 189,
+      "Ġel": 190,
+      "Ġeso": 191,
+      "no": 192,
+      "ente": 193,
+      "mbre": 194,
+      "era": 195,
+      "Ġcom": 196,
+      "Ġpro": 197,
+      "Ġestoy": 198,
+      "siempre": 199,
+      "vo": 200,
+      "Ġab": 201,
+      "Ġhambre": 202,
+      "Ã³mo": 203,
+      "ĠmÃ¡s": 204,
+      "li": 205,
+      "Ġun": 206,
+      "Ġg": 207,
+      "enti": 208,
+      "Ãº": 209,
+      "buen": 210,
+      "Ġeres": 211,
+      "mis": 212,
+      "Ġbuen": 213,
+      "raz": 214,
+      "Ġyo": 215,
+      "Ġmucho": 216,
+      "Ġmochi": 217,
+      "Ġvoy": 218,
+      "ĠestÃ¡n": 219,
+      "hora": 220,
+      "Ġto": 221,
+      "Ġesp": 222,
+      "cÃ³mo": 223,
+      "ba": 224,
+      "Ġhac": 225,
+      "Ġti": 226,
+      "ant": 227,
+      "Ġla": 228,
+      "ĠquÃ©": 229,
+      "ur": 230,
+      "das": 231,
+      "ida": 232,
+      "mbi": 233,
+      "Ġtu": 234,
+      "Ġh": 235,
+      "que": 236,
+      "Ġami": 237,
+      "eci": 238,
+      "ado": 239,
+      "aquÃŃ": 240,
+      "ju": 241,
+      "Ġal": 242,
+      "Ġten": 243,
+      "Ġale": 244,
+      "Ġdes": 245,
+      "ĠÂ¿": 246,
+      "pa": 247,
+      "Ġcal": 248,
+      "bl": 249,
+      "Ġya": 250,
+      "Ġfa": 251,
+      "Ã³n": 252,
+      "Ġalegra": 253,
+      "Ġalgo": 254,
+      "Ġso": 255,
+      "Ġsiempre": 256,
+      "esi": 257,
+      "ecesi": 258,
+      "qui": 259,
+      "ĠaquÃŃ": 260,
+      "vi": 261,
+      "blem": 262,
+      "vor": 263,
+      "Ġfavor": 264,
+      "Ġahora": 265,
+      "Ġi": 266,
+      "gos": 267,
+      "fec": 268,
+      "ana": 269,
+      "Ġo": 270,
+      "Ġgracias": 271,
+      "ar": 272,
+      "Ã©n": 273,
+      "ienes": 274,
+      "hoy": 275,
+      "Ġad": 276,
+      "Ġre": 277,
+      "ĠsÃŃ": 278,
+      "Ġser": 279,
+      "Ġlos": 280,
+      "ble": 281,
+      "Ġcomer": 282,
+      "Ġescu": 283,
+      "so": 284,
+      "Ġesta": 285,
+      "ÃŃas": 286,
+      "res": 287,
+      "Ġbueno": 288,
+      "Ġpo": 289,
+      "Ġlin": 290,
+      "de": 291,
+      "emos": 292,
+      "Ġabur": 293,
+      "Ġgu": 294,
+      "di": 295,
+      "Ġsiento": 296,
+      "amos": 297,
+      "Ġpue": 298,
+      "Ġtengo": 299,
+      "erfec": 300,
+      "Ġcuando": 301,
+      "rte": 302,
+      "ĠdÃŃas": 303,
+      "buenos": 304,
+      "Ġfue": 305,
+      "Ġamigos": 306,
+      "juga": 307,
+      "Ġfe": 308,
+      "Ġtambi": 309,
+      "ĠtambiÃ©n": 310,
+      "ito": 311,
+      "lo": 312,
+      "ial": 313,
+      "enial": 314,
+      "razo": 315,
+      "Ġnecesi": 316,
+      "ĠtÃº": 317,
+      "uel": 318,
+      "estoy": 319,
+      "hola": 320,
+      "entiend": 321,
+      "ti": 322,
+      "man": 323,
+      "ĠsÃ©": 324,
+      "Ġtodo": 325,
+      "Ġor": 326,
+      "cion": 327,
+      "eso": 328,
+      "entro": 329,
+      "Ġcont": 330,
+      "Ġpi": 331,
+      "ches": 332,
+      "ndo": 333,
+      "ce": 334,
+      "Ġlindo": 335,
+      "Ã©s": 336,
+      "Ġproblem": 337,
+      "enta": 338,
+      "Ġestu": 339,
+      "gual": 340,
+      "Ġigual": 341,
+      "lega": 342,
+      "Ġadentro": 343,
+      "ante": 344,
+      "Ġna": 345,
+      "aÃ±": 346,
+      "ub": 347,
+      "cre": 348,
+      "mida": 349,
+      "Ġvi": 350,
+      "aste": 351,
+      "osa": 352,
+      "ĠmaÃ±": 353,
+      "ĠmaÃ±ana": 354,
+      "Ġdor": 355,
+      "Ġpas": 356,
+      "Ġproblemas": 357,
+      "ab": 358,
+      "tienes": 359,
+      "Ġcuida": 360,
+      "ten": 361,
+      "Ġentiend": 362,
+      "se": 363,
+      "Ġhacer": 364,
+      "Ġperfec": 365,
+      "buenas": 366,
+      "Ġas": 367,
+      "estu": 368,
+      "tos": 369,
+      "Ġtri": 370,
+      "Ġaburri": 371,
+      "ya": 372,
+      "Ġfr": 373,
+      "hasta": 374,
+      "Ġfeli": 375,
+      "Ġnoches": 376,
+      "Ġcomida": 377,
+      "Ġpan": 378,
+      "asi": 379,
+      "Ġvuel": 380,
+      "Ġespeci": 381,
+      "Ġespecial": 382,
+      "Ġin": 383,
+      "et": 384,
+      "Ġdif": 385,
+      "Ã±o": 386,
+      "ive": 387,
+      "ivel": 388,
+      "Ġgenial": 389,
+      "cha": 390,
+      "ima": 391,
+      "Ġtra": 392,
+      "Ġaburrida": 393,
+      "nta": 394,
+      "uera": 395,
+      "Ġdesp": 396,
+      "estÃ¡s": 397,
+      "jos": 398,
+      "laro": 399,
+      "igo": 400,
+      "Ġtuve": 401,
+      "Ġestres": 402,
+      "Ġdormi": 403,
+      "ĠestÃ©s": 404,
+      "ale": 405,
+      "za": 406,
+      "ciÃ³n": 407,
+      "fuera": 408,
+      "Ġpuedo": 409,
+      "uena": 410,
+      "Ġescucha": 411,
+      "Ġescuchar": 412,
+      "Ġestresante": 413,
+      "fi": 414,
+      "Ġpoco": 415,
+      "el": 416,
+      "Ġemo": 417,
+      "tra": 418,
+      "Ġgust": 419,
+      "jas": 420,
+      "iste": 421,
+      "Ġsenti": 422,
+      "Ġsentir": 423,
+      "rim": 424,
+      "ĠsoÃ±": 425,
+      "date": 426,
+      "dad": 427,
+      "Ġsal": 428,
+      "Ġabrazo": 429,
+      "ciste": 430,
+      "Ġestar": 431,
+      "Ġdormir": 432,
+      "ecemos": 433,
+      "ĠdÃŃa": 434,
+      "Ġquier": 435,
+      "ol": 436,
+      "rita": 437,
+      "Ġpu": 438,
+      "jugar": 439,
+      "claro": 440,
+      "Ġcambi": 441,
+      "Ġnivel": 442,
+      "Ġfeliz": 443,
+      "quieres": 444,
+      "vamos": 445,
+      "Ġvol": 446,
+      "Ġcomo": 447,
+      "Ġcalor": 448,
+      "Ġperfecto": 449,
+      "ĠasÃŃ": 450,
+      "ĠestÃ¡s": 451,
+      "mente": 452,
+      "Ġtriste": 453,
+      "ans": 454,
+      "erente": 455,
+      "Ġllega": 456,
+      "ĠmÃŃ": 457,
+      "uman": 458,
+      "Ġhuman": 459,
+      "cita": 460,
+      "Ġpancita": 461,
+      "nto": 462,
+      "Ġve": 463,
+      "Ġpati": 464,
+      "Ġpatitas": 465,
+      "razÃ³n": 466,
+      "Ġnota": 467,
+      "ca": 468,
+      "Ã³s": 469,
+      "Ġsea": 470,
+      "unque": 471,
+      "Ġenc": 472,
+      "ron": 473,
+      "sub": 474,
+      "hace": 475,
+      "somos": 476,
+      "todo": 477,
+      "Ġesper": 478,
+      "Ġri": 479,
+      "Ġrico": 480,
+      "io": 481,
+      "Ġserio": 482,
+      "Ġescucho": 483,
+      "Ġhaces": 484,
+      "des": 485,
+      "Ġafuera": 486,
+      "ejas": 487,
+      "Ġorejas": 488,
+      "Ġquieres": 489,
+      "imp": 490,
+      "ĠcambiÃ³": 491,
+      "den": 492,
+      "ido": 493,
+      "los": 494,
+      "Ġmom": 495,
+      "Ġra": 496,
+      "endo": 497,
+      "Ġdu": 498,
+      "enos": 499,
+      "Ġmenos": 500,
+      "Ġsuena": 501,
+      "hay": 502,
+      "Ġojos": 503,
+      "Ġnecesito": 504,
+      "Ġcola": 505,
+      "Ã±a": 506,
+      "eque": 507,
+      "uego": 508,
+      "Ġan": 509,
+      "Ġesperando": 510,
+      "chet": 511,
+      "Ġcachet": 512,
+      "Ġcachetes": 513,
+      "ela": 514,
+      "ĠgustÃ³": 515,
+      "Ġsu": 516,
+      "ces": 517,
+      "ens": 518,
+      "jo": 519,
+      "yo": 520,
+      "Ġcomp": 521,
+      "adi": 522,
+      "adiÃ³s": 523,
+      "asco": 524,
+      "ascota": 525,
+      "Ġex": 526,
+      "Ġfavorito": 527,
+      "mp": 528,
+      "Ġemp": 529,
+      "taba": 530,
+      "Ġnecesitaba": 531,
+      "vÃŃa": 532,
+      "Ġpes": 533,
+      "davÃŃa": 534,
+      "ĠtodavÃŃa": 535,
+      "Ã©nta": 536,
+      "Ġli": 537,
+      "Ã©ntame": 538,
+      "Ġluego": 539,
+      "ĠM": 540,
+      "Ġvuelta": 541,
+      "Ġnada": 542,
+      "ert": 543,
+      "Ġsient": 544,
+      "Ġmomento": 545,
+      "ochi": 546,
+      "jugamos": 547,
+      "ex": 548,
+      "ey": 549,
+      "hey": 550,
+      "ma": 551,
+      "rme": 552,
+      "ĠrazÃ³n": 553,
+      "estuvo": 554,
+      "Ġvamos": 555,
+      "lima": 556,
+      "Ġclima": 557,
+      "Ġencant": 558,
+      "erp": 559,
+      "Ġcuerp": 560,
+      "Ġcalenta": 561,
+      "Ġlas": 562,
+      "soy": 563,
+      "Ġmascota": 564,
+      "Ġpesado": 565,
+      "Ġch": 566,
+      "Ġjugar": 567,
+      "Ġnue": 568,
+      "Ġado": 569,
+      "Ġestuvi": 570,
+      "Ġuna": 571,
+      "Ġquieras": 572,
+      "ura": 573,
+      "Ġcre": 574,
+      "Ã±ÃŃa": 575,
+      "Ġcompa": 576,
+      "ĠcompaÃ±ÃŃa": 577,
+      "ac": 578,
+      "Ġcasi": 579,
+      "Ġpasa": 580,
+      "Ġhace": 581,
+      "ĠsoÃ±Ã©": 582,
+      "Ġese": 583,
+      "Ġcontigo": 584,
+      "rÃ¡": 585,
+      "Ġcuerpito": 586,
+      "Ġdon": 587,
+      "rÃŃa": 588,
+      "Ġaunque": 589,
+      "Ġvolv": 590,
+      "Ġhi": 591,
+      "rando": 592,
+      "Ġpeque": 593,
+      "abrazo": 594,
+      "Ġproba": 595,
+      "blemente": 596,
+      "ĠMochi": 597,
+      "Ġprobablemente": 598,
+      "alle": 599,
+      "Ġgalle": 600,
+      "Ġgalletas": 601,
+      "soÃ±": 602,
+      "Ġdiferente": 603,
+      "Ġman": 604,
+      "Ġfru": 605,
+      "evo": 606,
+      "lu": 607,
+      "evolu": 608,
+      "evolucion": 609,
+      "Ġtienes": 610,
+      "ay": 611,
+      "Ġsegu": 612,
+      "Ġcarita": 613,
+      "ensando": 614,
+      "Ġson": 615,
+      "dor": 616,
+      "be": 617,
+      "Ġimp": 618,
+      "Ġcabe": 619,
+      "Ġcabeza": 620,
+      "riz": 621,
+      "Ġnariz": 622,
+      "dale": 623,
+      "Â¡": 624,
+      "Ġdigo": 625,
+      "idas": 626,
+      "ÃŃdate": 627,
+      "cuÃŃdate": 628,
+      "Ġlista": 629,
+      "Ġespero": 630,
+      "ecitos": 631,
+      "Ġpiecitos": 632,
+      "Ġdel": 633,
+      "erdad": 634,
+      "Ġverdad": 635,
+      "mu": 636,
+      "muy": 637,
+      "Ġtal": 638,
+      "ÃŃo": 639,
+      "ĠfrÃŃo": 640,
+      "ĠemociÃ³n": 641,
+      "rable": 642,
+      "Ġadorable": 643,
+      "iento": 644,
+      "empecemos": 645,
+      "Ġcuidado": 646,
+      "ita": 647,
+      "ah": 648,
+      "Ġpon": 649,
+      "Ãºn": 650,
+      "Ġcuidas": 651,
+      "cuer": 652,
+      "llega": 653,
+      "llegaste": 654,
+      "dos": 655,
+      "Ġgan": 656,
+      "estuve": 657,
+      "mejor": 658,
+      "Ġlistas": 659,
+      "Ġsue": 660,
+      "lor": 661,
+      "Ġcer": 662,
+      "ada": 663,
+      "Ġguar": 664,
+      "Ġdespert": 665,
+      "Ġdas": 666,
+      "necesi": 667,
+      "ÃŃci": 668,
+      "Ġentiendes": 669,
+      "ĠdifÃŃci": 670,
+      "ĠdifÃŃcil": 671,
+      "fue": 672,
+      "Ġhumanos": 673,
+      "mal": 674,
+      "tengo": 675,
+      "genial": 676,
+      "Ġvivo": 677,
+      "con": 678,
+      "ros": 679,
+      "Ġnuevo": 680,
+      "cado": 681,
+      "licado": 682,
+      "Ġcomplicado": 683,
+      "Ġdesc": 684,
+      "traÃ±": 685,
+      "uda": 686,
+      "yuda": 687,
+      "Ġayuda": 688,
+      "Ġesto": 689,
+      "!<|": 690,
+      "Ġw": 691,
+      "Ġprim": 692,
+      "Ġcosa": 693,
+      "Ġrato": 694,
+      "Ġint": 695,
+      "Ã¡l": 696,
+      "guemos": 697,
+      "juguemos": 698,
+      "Ġcuidar": 699,
+      "cos": 700,
+      "Ġagra": 701,
+      "Ġcolor": 702,
+      "lista": 703,
+      "diera": 704,
+      "Ġpudiera": 705,
+      "Ġba": 706,
+      "ori": 707,
+      "Ġho": 708,
+      "ĠencantÃ³": 709,
+      "rimiento": 710,
+      "sica": 711,
+      "ĠmÃº": 712,
+      "ĠmÃºsica": 713,
+      "je": 714,
+      "Ġtraje": 715,
+      "Ġpre": 716,
+      "Ġestaba": 717,
+      "Ġdale": 718,
+      "ras": 719,
+      "ern": 720,
+      "Ġcans": 721,
+      "eron": 722,
+      "cont": 723,
+      "Ġpronto": 724,
+      "Ġqueda": 725,
+      "Ġestuve": 726,
+      "ll": 727,
+      "soÃ±aste": 728,
+      "Ġsientes": 729,
+      "Ġgano": 730,
+      "rtido": 731,
+      "vertido": 732,
+      "Ġdivertido": 733,
+      "Ġaten": 734,
+      "ĠatenciÃ³n": 735,
+      "cuÃ©ntame": 736,
+      "Ġemocion": 737,
+      "perfec": 738,
+      "Ġconfi": 739,
+      "Ġconfir": 740,
+      "Ġhoy": 741,
+      "elado": 742,
+      "iera": 743,
+      "Ġhub": 744,
+      "subiste": 745,
+      "Ġhubiera": 746,
+      "zan": 747,
+      "Ġsiente": 748,
+      "creciste": 749,
+      "cer": 750,
+      "Ġcrecer": 751,
+      "ena": 752,
+      "ual": 753,
+      "rtual": 754,
+      "Ġdul": 755,
+      "Ġentiendo": 756,
+      "Ã¡ndo": 757,
+      "evolucionaste": 758,
+      "lle": 759,
+      "Ġporque": 760,
+      "Ġcere": 761,
+      "Ġhab": 762,
+      "Ġsus": 763,
+      "Ġcalentaron": 764,
+      "zco": 765,
+      "ĠvolvÃŃ": 766,
+      "mÃŃ": 767,
+      "alo": 768,
+      "Ġvib": 769,
+      "contigo": 770,
+      "ort": 771,
+      "ĠpequeÃ±a": 772,
+      "Ġaman": 773,
+      "Ġfun": 774,
+      "Ġfuncion": 775,
+      "sto": 776,
+      "Ġtar": 777,
+      "Ġprimero": 778,
+      "almente": 779,
+      "Ġbo": 780,
+      "ĠquÃ©date": 781,
+      "Ġamigo": 782,
+      "stos": 783,
+      "Ġquedo": 784,
+      "uestos": 785,
+      "Ġverte": 786,
+      "vuel": 787,
+      "Ġdevuel": 788,
+      "Ġabraz": 789,
+      "Ġabrazos": 790,
+      "ĠtrÃ¡": 791,
+      "alqui": 792,
+      "alquier": 793,
+      "Ġr": 794,
+      "Ġbon": 795,
+      "Ġempecemos": 796,
+      "eta": 797,
+      "ĠserÃŃa": 798,
+      "Ġama": 799,
+      "Ġamable": 800,
+      "entas": 801,
+      "Ġcontentas": 802,
+      "uÃ©s": 803,
+      "ĠdespuÃ©s": 804,
+      "entitas": 805,
+      "Ġcalentitas": 806,
+      "ami": 807,
+      "amigos": 808,
+      "deci": 809,
+      "int": 810,
+      "ĠpasÃ³": 811,
+      "Ġvibrando": 812,
+      "Ġera": 813,
+      "stes": 814,
+      "subÃŃ": 815,
+      "les": 816,
+      "Ġro": 817,
+      "Ġent": 818,
+      "Ġorden": 819,
+      "Ġfunciona": 820,
+      "pare": 821,
+      "cuerdo": 822,
+      "cÃŃ": 823,
+      "crecÃŃ": 824,
+      "Ġsola": 825,
+      "ĠcÃ³mo": 826,
+      "ĠcÃ³moda": 827,
+      "Ġhumano": 828,
+      "zo": 829,
+      "esta": 830,
+      "Ġllo": 831,
+      "estÃ¡": 832,
+      "viendo": 833,
+      "Ġlloviendo": 834,
+      "Ġperfecta": 835,
+      "rÃŃ": 836,
+      "Ġpensando": 837,
+      "perfecto": 838,
+      "Ġaburrimiento": 839,
+      "ĠdespertÃ©": 840,
+      "emÃ¡s": 841,
+      "ĠademÃ¡s": 842,
+      "exac": 843,
+      "exacto": 844,
+      "Ġparo": 845,
+      "Ġtirita": 846,
+      "Ġtiritar": 847,
+      "gar": 848,
+      "Ġlinda": 849,
+      "cen": 850,
+      "Ġdicen": 851,
+      "egu": 852,
+      "ina": 853,
+      "Ġasegu": 854,
+      "Ġaseguro": 855,
+      "cidad": 856,
+      "jal": 857,
+      "ojal": 858,
+      "ojalÃ¡": 859,
+      "Ġcuento": 860,
+      "alta": 861,
+      "Ġfalta": 862,
+      "Ġestuviste": 863,
+      "sin": 864,
+      "Ġllegado": 865,
+      "ĠsueÃ±o": 866,
+      "don": 867,
+      "Ġredon": 868,
+      "gull": 869,
+      "Ġorgull": 870,
+      "Ġorgullosa": 871,
+      "miste": 872,
+      "Ġestuvieron": 873,
+      "dormiste": 874,
+      "tan": 875,
+      "Ġnotan": 876,
+      "guÃ©": 877,
+      "Ġentienda": 878,
+      "lleguÃ©": 879,
+      "notas": 880,
+      "masi": 881,
+      "Ġdemasi": 882,
+      "Ġfeo": 883,
+      "Ġdemasiado": 884,
+      "Ġll": 885,
+      "ide": 886,
+      "rro": 887,
+      "Ġarro": 888,
+      "Ġfide": 889,
+      "litas": 890,
+      "Ġbolitas": 891,
+      "Ġarroz": 892,
+      "Ġfideos": 893,
+      "Ġtristes": 894,
+      "Ġmundo": 895,
+      "come": 896,
+      "anadas": 897,
+      "Ġempanadas": 898,
+      "Ġsegura": 899,
+      "Ġhizo": 900,
+      "Ġsoy": 901,
+      "Ġmejores": 902,
+      "ÃŃble": 903,
+      "creÃŃble": 904,
+      "ĠincreÃŃble": 905,
+      "Ġandas": 906,
+      "aho": 907,
+      "gaste": 908,
+      "Ġdesaho": 909,
+      "para": 910,
+      "Ġdesahogaste": 911,
+      "tri": 912,
+      "Ġdonas": 913,
+      "triste": 914,
+      "eciste": 915,
+      "Ġimport": 916,
+      "Ġamaneciste": 917,
+      "ugar": 918,
+      "Ġlugar": 919,
+      "Ġguardo": 920,
+      "Ġcho": 921,
+      "late": 922,
+      "colate": 923,
+      "Ġchocolate": 924,
+      "Ġcome": 925,
+      "tÃº": 926,
+      "tina": 927,
+      "Ġtamal": 928,
+      "Ġgela": 929,
+      "Ġtamales": 930,
+      "Ġgelatina": 931,
+      "Ġestuvo": 932,
+      "Ġmanzan": 933,
+      "Ġmanzanas": 934,
+      "Ġdulces": 935,
+      "Ġfrutos": 936,
+      "Ġrojos": 937,
+      "Ġpalo": 938,
+      "mitas": 939,
+      "Ġpalomitas": 940,
+      "Ã¡ndote": 941,
+      "Ġmuero": 942,
+      "Ġmanera": 943,
+      "Ġhiciste": 944,
+      "Ġfruta": 945,
+      "Ġcereal": 946,
+      "kes": 947,
+      "Ġcakes": 948,
+      "Ġhot": 949,
+      "Ġtacos": 950,
+      "Ġhelado": 951,
+      "Ġhora": 952,
+      "urros": 953,
+      "Ġchurros": 954,
+      "hori": 955,
+      "zana": 956,
+      "Ġzana": 957,
+      "horias": 958,
+      "Ġzanahorias": 959,
+      "aw": 960,
+      "stado": 961,
+      "Ġtostado": 962,
+      "Ġdescans": 963,
+      "zza": 964,
+      "Ġpizza": 965,
+      "Ġquer": 966,
+      "af": 967,
+      "fles": 968,
+      "is": 969,
+      "sant": 970,
+      "ermo": 971,
+      "Ġcro": 972,
+      "Ġduermo": 973,
+      "Ġwaf": 974,
+      "issant": 975,
+      "Ġcroissant": 976,
+      "Ġwaffles": 977,
+      "Ġcroissants": 978,
+      "hi": 979,
+      "Ġsushi": 980,
+      "dw": 981,
+      "iches": 982,
+      "ndw": 983,
+      "ĠsÃ¡": 984,
+      "Ġagradeci": 985,
+      "ndwiches": 986,
+      "ĠsÃ¡ndwiches": 987,
+      "Ġagradecidas": 988,
+      "dÃŃ": 989,
+      "ĠpudÃŃ": 990,
+      "ĠpudÃŃn": 991,
+      "Ġol": 992,
+      "Ġvirtual": 993,
+      "stel": 994,
+      "Ġpastel": 995,
+      "pi": 996,
+      "Ġcos": 997,
+      "Ġdos": 998,
+      "ĠtenÃŃa": 999,
+      "Ġcosas": 1000,
+      "tic": 1001,
+      "pas": 1002,
+      "Ġfri": 1003,
+      "Ġpapas": 1004,
+      "Ġfritas": 1005,
+      "Ġllegaste": 1006,
+      "lar": 1007,
+      "viste": 1008,
+      "Ġvolviste": 1009,
+      "Ġdeci": 1010,
+      "fin": 1011,
+      "Ġinteres": 1012,
+      "cuÃ¡l": 1013,
+      "gs": 1014,
+      "hu": 1015,
+      "hugs": 1016,
+      "ÃŃmi": 1017,
+      "ĠcuÃ©ntame": 1018,
+      "Ġpuedes": 1019,
+      "imo": 1020,
+      "gÃºn": 1021,
+      "ico": 1022,
+      "ĠÃºn": 1023,
+      "ĠÃºnico": 1024,
+      "Ġsalta": 1025,
+      "Ġtanto": 1026,
+      "imos": 1027,
+      "ferente": 1028,
+      "stint": 1029,
+      "sible": 1030,
+      "Ġdistint": 1031,
+      "diferente": 1032,
+      "Ġsienten": 1033,
+      "Ġdistintas": 1034,
+      "necesitas": 1035,
+      "Ġemocionalmente": 1036,
+      "poy": 1037,
+      "Ġapoy": 1038,
+      "Ġapoyo": 1039,
+      "migo": 1040,
+      "Ġconmigo": 1041,
+      "gate": 1042,
+      "abrÃŃ": 1043,
+      "abrÃŃgate": 1044,
+      "pres": 1045,
+      "suena": 1046,
+      "Ġsepa": 1047,
+      "Ġcalentarte": 1048,
+      "Ġagu": 1049,
+      "Ġtern": 1050,
+      "Ġtanta": 1051,
+      "Ġbuena": 1052,
+      "antan": 1053,
+      "Ġaguantan": 1054,
+      "Ġternura": 1055,
+      "ui": 1056,
+      "dormÃŃ": 1057,
+      "Ġmal": 1058,
+      "ocu": 1059,
+      "imaron": 1060,
+      "Ġanimaron": 1061,
+      "Ġpreocu": 1062,
+      "Ġpreocupa": 1063,
+      "Ġcansada": 1064,
+      "cÃ³modo": 1065,
+      "ĠincÃ³modo": 1066,
+      "Ġfelizmente": 1067,
+      "creo": 1068,
+      "Ġacuerdo": 1069,
+      "Ġdescanses": 1070,
+      "Ġgusto": 1071,
+      "Ġquieren": 1072,
+      "menta": 1073,
+      "Ġtor": 1074,
+      "Ġtormenta": 1075,
+      "vent": 1076,
+      "gi": 1077,
+      "ion": 1078,
+      "iones": 1079,
+      "erte": 1080,
+      "Ġtenerte": 1081,
+      "Ġquedas": 1082,
+      "ĠextraÃ±": 1083,
+      "Ġdevuelvo": 1084,
+      "Ġda": 1085,
+      "Ġpropi": 1086,
+      "entiendo": 1087,
+      "Ġquedarte": 1088,
+      "Ġpropios": 1089,
+      "onces": 1090,
+      "Ġentonces": 1091,
+      "Ġquerida": 1092,
+      "Ġfuerte": 1093,
+      "cualquier": 1094,
+      "extraÃ±": 1095,
+      "extraÃ±Ã¡ndote": 1096,
+      "Ġtan": 1097,
+      "Ġpasar": 1098,
+      "Ġfelicidad": 1099,
+      "necesito": 1100,
+      "Ġhablar": 1101,
+      "Ġdecirme": 1102,
+      "mpa": 1103,
+      "sigo": 1104,
+      "Ġaco": 1105,
+      "mpaÃ±o": 1106,
+      "ĠacompaÃ±o": 1107,
+      "iÃ³": 1108,
+      "pto": 1109,
+      "Ġace": 1110,
+      "Ġacepto": 1111,
+      "itos": 1112,
+      "Ġlla": 1113,
+      "Ġinfin": 1114,
+      "Ġbonita": 1115,
+      "ĠtenÃŃamos": 1116,
+      "Ġinfinitos": 1117,
+      "ijo": 1118,
+      "Ġelijo": 1119,
+      "jiste": 1120,
+      "trajiste": 1121,
+      "Ġnin": 1122,
+      "Ġlado": 1123,
+      "ĠningÃºn": 1124,
+      "Ġapare": 1125,
+      "Ġapareciste": 1126,
+      "Ġchi": 1127,
+      "pensando": 1128,
+      "Ġamiga": 1129,
+      "por": 1130,
+      "Ġhay": 1131,
+      "vaste": 1132,
+      "Ġsalvaste": 1133,
+      "Ġpien": 1134,
+      "Ġsigu": 1135,
+      "listo": 1136,
+      "Ġponer": 1137,
+      "Ġsigues": 1138,
+      "afuera": 1139,
+      "ozco": 1140,
+      "Ġconozco": 1141,
+      "Ġllena": 1142,
+      "las": 1143,
+      "Ġju": 1144,
+      "Ġfavorita": 1145,
+      "Ġvuelve": 1146,
+      "Ġconfirman": 1147,
+      "Ġgusta": 1148,
+      "Ġbaj": 1149,
+      "estaba": 1150,
+      "cib": 1151,
+      "Ġrecib": 1152,
+      "ntes": 1153,
+      "Ġantes": 1154,
+      "Ġencanta": 1155,
+      "jan": 1156,
+      "nde": 1157,
+      "Ġgra": 1158,
+      "Ġposible": 1159,
+      "Ġgrande": 1160,
+      "Ġimportante": 1161,
+      "uniones": 1162,
+      "ceso": 1163,
+      "Ġproceso": 1164,
+      "anco": 1165,
+      "Ġbanco": 1166,
+      "Ġafec": 1167,
+      "Ġafecta": 1168,
+      "Ġsin": 1169,
+      "Ġmue": 1170,
+      "Ġvolvemos": 1171,
+      "Ġcontenta": 1172,
+      "ventura": 1173,
+      "ĠdirÃŃa": 1174,
+      "abur": 1175,
+      "latic": 1176,
+      "xel": 1177,
+      "ĠpÃŃ": 1178,
+      "xeles": 1179,
+      "ĠpÃŃxeles": 1180,
+      "mado": 1181,
+      "Ġotra": 1182,
+      "Ġconfirmado": 1183,
+      "ĠpequeÃ±o": 1184,
+      "gida": 1185,
+      "tes": 1186,
+      "mites": 1187,
+      "tegida": 1188,
+      "Ġprotegida": 1189,
+      "ĠtrÃ¡mites": 1190,
+      "anso": 1191,
+      "Ġpiden": 1192,
+      "Ġdescanso": 1193,
+      "Ġpregu": 1194,
+      "ĠcÃ¡l": 1195,
+      "culo": 1196,
+      "adores": 1197,
+      "Ġsolas": 1198,
+      "ĠcÃ¡lculo": 1199,
+      "empo": 1200,
+      "Ġtiempo": 1201,
+      "ct": 1202,
+      "uras": 1203,
+      "Ġfact": 1204,
+      "Ġfacturas": 1205,
+      "eÃ±": 1206,
+      "ifi": 1207,
+      "Ġpena": 1208,
+      "aliÃ³": 1209,
+      "ĠvaliÃ³": 1210,
+      "Ġwifi": 1211,
+      "raseÃ±": 1212,
+      "ĠcansÃ©": 1213,
+      "raseÃ±as": 1214,
+      "bien": 1215,
+      "Ġdieta": 1216,
+      "ernet": 1217,
+      "puestos": 1218,
+      "upuestos": 1219,
+      "ormal": 1220,
+      "Ġnormal": 1221,
+      "fico": 1222,
+      "ĠtrÃ¡fico": 1223,
+      "stante": 1224,
+      "Ġfin": 1225,
+      "Ġvec": 1226,
+      "quiero": 1227,
+      "Ġveces": 1228,
+      "by": 1229,
+      "bye": 1230,
+      "pet": 1231,
+      "Ġrepet": 1232,
+      "Ġrepetimos": 1233,
+      "aunque": 1234,
+      "dezco": 1235,
+      "Ġagradezco": 1236,
+      "daste": 1237,
+      "Ġpongo": 1238,
+      "nivel": 1239,
+      "oque": 1240,
+      "Ġdesbl": 1241,
+      "Ġreuniones": 1242,
+      "oqueado": 1243,
+      "Ġdesbloqueado": 1244,
+      "nasi": 1245,
+      "imnasi": 1246,
+      "Ġgimnasi": 1247,
+      "Ġgimnasio": 1248,
+      "Ġmejo": 1249,
+      "Ġmejora": 1250,
+      "fer": 1251,
+      "reas": 1252,
+      "ferma": 1253,
+      "ÃŃti": 1254,
+      "Ġaleg": 1255,
+      "ÃŃtica": 1256,
+      "cia": 1257,
+      "Ġrecuer": 1258,
+      "Ġcreo": 1259,
+      "evolucione": 1260,
+      "lajan": 1261,
+      "Ġdices": 1262,
+      "Ġrelajan": 1263,
+      "ient": 1264,
+      "idad": 1265,
+      "arÃŃa": 1266,
+      "cuida": 1267,
+      "Ġpido": 1268,
+      "cuidada": 1269,
+      "drÃŃa": 1270,
+      "Ġredondos": 1271,
+      "hambre": 1272,
+      "Ġimpuestos": 1273,
+      "Ġcuidarme": 1274,
+      "cial": 1275,
+      "Ġsocial": 1276,
+      "Ġsociales": 1277,
+      "bajo": 1278,
+      "Ġtrabajo": 1279,
+      "Ġsimp": 1280,
+      "Ġrara": 1281,
+      "Ġmueve": 1282,
+      "riÃ±o": 1283,
+      "ĠcariÃ±o": 1284,
+      "sado": 1285,
+      "Ġavi": 1286,
+      "uno": 1287,
+      "Ġdesay": 1288,
+      "soÃ±Ã©": 1289,
+      "Ġavisado": 1290,
+      "Ġdesayuno": 1291,
+      "etas": 1292,
+      "rse": 1293,
+      "Ġquietas": 1294,
+      "Ġpueden": 1295,
+      "Ġquedarse": 1296,
+      "Ġpres": 1297,
+      "ÃŃdas": 1298,
+      "Ġhasta": 1299,
+      "ĠcaÃŃdas": 1300,
+      "Ġhojas": 1301,
+      "Ġtarde": 1302,
+      "Ġpresupuestos": 1303,
+      "Ġmimo": 1304,
+      "ĠcontraseÃ±as": 1305,
+      "Ġdespertadores": 1306,
+      "Ġbaja": 1307,
+      "Ġtemp": 1308,
+      "rano": 1309,
+      "eraba": 1310,
+      "Ġesperaba": 1311,
+      "ĠdormÃŃ": 1312,
+      "Ġtemprano": 1313,
+      "pido": 1314,
+      "ĠrÃ¡": 1315,
+      "Ġsab": 1316,
+      "ĠcorazÃ³n": 1317,
+      "Ġparadas": 1318,
+      "Ġlate": 1319,
+      "ĠsoÃ±ar": 1320,
+      "Ġseguros": 1321,
+      "ĠrÃ¡pido": 1322,
+      "ĠsabÃŃa": 1323,
+      "orre": 1324,
+      "orreos": 1325,
+      "algo": 1326,
+      "Ġinternet": 1327,
+      "endrÃŃa": 1328,
+      "ĠvendrÃŃa": 1329,
+      "tal": 1330,
+      "iert": 1331,
+      "jar": 1332,
+      "ĠlÃŃmi": 1333,
+      "Ġdejar": 1334,
+      "chas": 1335,
+      "Ġdespiert": 1336,
+      "Ġrui": 1337,
+      "Ġsaltar": 1338,
+      "ĠlÃŃmite": 1339,
+      "Ġdespiertas": 1340,
+      "Ġruidos": 1341,
+      "gas": 1342,
+      "igas": 1343,
+      "Ġtraigas": 1344,
+      "dera": 1345,
+      "Ġmejore": 1346,
+      "Ġmodera": 1347,
+      "tristeza": 1348,
+      "Ġmoderada": 1349,
+      "fe": 1350,
+      "ÃŃr": 1351,
+      "ier": 1352,
+      "Ġcier": 1353,
+      "ran": 1354,
+      "Ġsolos": 1355,
+      "Ġcierran": 1356,
+      "Ġbuenas": 1357,
+      "gue": 1358,
+      "Ġsigue": 1359,
+      "Ġmirando": 1360,
+      "ĠsueÃ±a": 1361,
+      "Ġguarda": 1362,
+      "Ġbonito": 1363,
+      "ermos": 1364,
+      "Ġhermos": 1365,
+      "Ġbai": 1366,
+      "Ġolvi": 1367,
+      "Ġhermoso": 1368,
+      "lÃŃtica": 1369,
+      "ĠpolÃŃtica": 1370,
+      "Ġcualquier": 1371,
+      "quiÃ©n": 1372,
+      "Ġtareas": 1373,
+      "Ġpregunt": 1374,
+      "Ġdevuelto": 1375,
+      "Ġintereses": 1376,
+      "Ġcuri": 1377,
+      "Ġvuelvo": 1378,
+      "sas": 1379,
+      "stra": 1380,
+      "stad": 1381,
+      "ciente": 1382,
+      "Ġamistad": 1383,
+      "ficiente": 1384,
+      "Ġsuficiente": 1385,
+      "Ġnuestra": 1386,
+      "Ġpiensas": 1387,
+      "stosa": 1388,
+      "quito": 1389,
+      "Ġpoquito": 1390,
+      "Ġchistosa": 1391,
+      "ter": 1392,
+      "Ġgente": 1393,
+      "Ġliter": 1394,
+      "Ġliteralmente": 1395,
+      "Ġredes": 1396,
+      "Ġtardaste": 1397,
+      "ut": 1398,
+      "Ġrecuerdas": 1399,
+      "ven": 1400,
+      "Ġpreocupaba": 1401,
+      "bienven": 1402,
+      "bienvenida": 1403,
+      "Ġcara": 1404,
+      "Ġenferma": 1405,
+      "Ġmeta": 1406,
+      "virtual": 1407,
+      "Ġreal": 1408,
+      "plo": 1409,
+      "Ġjusto": 1410,
+      "plora": 1411,
+      "Ġdando": 1412,
+      "vida": 1413,
+      "Ġpens": 1414,
+      "ahÃŃ": 1415,
+      "ĠhabÃŃas": 1416,
+      "Ġolvida": 1417,
+      "ĠpensÃ©": 1418,
+      "Ġolvidado": 1419,
+      "Ġrecibido": 1420,
+      "Ġchiste": 1421,
+      "Ġexpres": 1422,
+      "Ġexpresar": 1423,
+      "Ġcorreos": 1424,
+      "Ġalegran": 1425,
+      "gin": 1426,
+      "Ġima": 1427,
+      "Ġaburrido": 1428,
+      "gino": 1429,
+      "Ġimagino": 1430,
+      "xelado": 1431,
+      "Ġpixelado": 1432,
+      "Ġhola": 1433,
+      "ĠextraÃ±Ã©": 1434,
+      "eten": 1435,
+      "mor": 1436,
+      "Ġamor": 1437,
+      "ĠdarÃŃa": 1438,
+      "entras": 1439,
+      "Ġmientras": 1440,
+      "Ġcompeten": 1441,
+      "Ġdarte": 1442,
+      "Ġcompetencia": 1443,
+      "Ġtien": 1444,
+      "Ġtiene": 1445,
+      "Ġbuenos": 1446,
+      "cans": 1447,
+      "Ġcalient": 1448,
+      "Ġcalidad": 1449,
+      "Ġpocos": 1450,
+      "Ġponen": 1451,
+      "Ġcalientan": 1452,
+      "Ġfechas": 1453,
+      "po": 1454,
+      "Ġdejo": 1455,
+      "argo": 1456,
+      "Ġencargo": 1457,
+      "Ġpuede": 1458,
+      "Ġinteresa": 1459,
+      "aventura": 1460,
+      "peque": 1461,
+      "pequeÃ±a": 1462,
+      "ecÃŃ": 1463,
+      "feli": 1464,
+      "Ġclaro": 1465,
+      "Ġhago": 1466,
+      "Ġdiste": 1467,
+      "ciendo": 1468,
+      "ĠdÃ³n": 1469,
+      "tada": 1470,
+      "ĠdÃ³nde": 1471,
+      "Ġproblema": 1472,
+      "ubori": 1473,
+      "Ġescucharlo": 1474,
+      "Ġrubori": 1475,
+      "parece": 1476,
+      "Ġruborizan": 1477,
+      "dando": 1478,
+      "Ġdigi": 1479,
+      "Ġdigital": 1480,
+      "Ġele": 1481,
+      "girme": 1482,
+      "Ġelegirme": 1483,
+      "lienta": 1484,
+      "ĠsoÃ±o": 1485,
+      "ĠsoÃ±olienta": 1486,
+      "Ġdulce": 1487,
+      "aya": 1488,
+      "Ġvaya": 1489,
+      "bro": 1490,
+      "Ġcerebro": 1491,
+      "Ġsimple": 1492,
+      "nos": 1493,
+      "Ġvemos": 1494,
+      "nqui": 1495,
+      "Ġsolo": 1496,
+      "Ġtranqui": 1497,
+      "Ġexiste": 1498,
+      "Ġtranquila": 1499,
+      "iÃ³s": 1500,
+      "ks": 1501,
+      "nac": 1502,
+      "Ġsnac": 1503,
+      "ĠadiÃ³s": 1504,
+      "Ġguardado": 1505,
+      "Ġsnacks": 1506,
+      "entada": 1507,
+      "Ġcolores": 1508,
+      "sieron": 1509,
+      "ĠtÃŃmi": 1510,
+      "Ġpuedas": 1511,
+      "Ġpusieron": 1512,
+      "ĠtÃŃmidas": 1513,
+      "Ġpares": 1514,
+      "Ġvas": 1515,
+      "Ġtom": 1516,
+      "galo": 1517,
+      "Ġsiendo": 1518,
+      "quieta": 1519,
+      "Ġinquieta": 1520,
+      "Ġolvides": 1521,
+      "platic": 1522,
+      "platicamos": 1523,
+      "nco": 1524,
+      "cinco": 1525,
+      "Ġide": 1526,
+      "Ġidea": 1527,
+      "siosa": 1528,
+      "Ġansiosa": 1529,
+      "Ġredonda": 1530,
+      "ĠextraÃ±ar": 1531,
+      "na": 1532,
+      "rina": 1533,
+      "Ġsaltarina": 1534,
+      "ximo": 1535,
+      "ĠmÃ¡": 1536,
+      "aburrimiento": 1537,
+      "ĠmÃ¡ximo": 1538,
+      "Ġadoro": 1539,
+      "Ġpreguntar": 1540,
+      "Ġcuriosa": 1541,
+      "rÃ©": 1542,
+      "rve": 1543,
+      "entrÃ©": 1544,
+      "Ġsirve": 1545,
+      "tenme": 1546,
+      "entrÃ©tenme": 1547,
+      "Ġrosa": 1548,
+      "Ġhaga": 1549,
+      "guien": 1550,
+      "Ġalguien": 1551,
+      "Ġaburro": 1552,
+      "esto": 1553,
+      "gente": 1554,
+      "Ġur": 1555,
+      "Ġnecesitas": 1556,
+      "Ġurgente": 1557,
+      "put": 1558,
+      "Ġinput": 1559,
+      "bastante": 1560,
+      "explora": 1561,
+      "exploramos": 1562,
+      "able": 1563,
+      "nada": 1564,
+      "port": 1565,
+      "soport": 1566,
+      "Ġinsoport": 1567,
+      "Ġinsoportable": 1568,
+      "nesta": 1569,
+      "honesta": 1570,
+      "rida": 1571,
+      "Ġtardes": 1572,
+      "aburrida": 1573,
+      "honestamente": 1574,
+      "descans": 1575,
+      "descansa": 1576,
+      "ĠsoÃ±aste": 1577,
+      "sÃ©": 1578,
+      "darme": 1579,
+      "Ġparte": 1580,
+      "Ġtrato": 1581,
+      "ĠsentirÃŃa": 1582,
+      "Ġcerca": 1583,
+      "Ġimporta": 1584,
+      "Ġdormida": 1585,
+      "mas": 1586,
+      "Ġllamas": 1587,
+      "dÃ³n": 1588,
+      "per": 1589,
+      "imiento": 1590,
+      "reten": 1591,
+      "Ġfui": 1592,
+      "Ġemocionada": 1593,
+      "Ġentreten": 1594,
+      "perdÃ³n": 1595,
+      "Ġentretenimiento": 1596,
+      "staura": 1597,
+      "letada": 1598,
+      "Ġrestaura": 1599,
+      "Ġcambiado": 1600,
+      "Ġcompletada": 1601,
+      "ĠamanecÃŃ": 1602,
+      "felicidad": 1603,
+      "Ġrestaurada": 1604,
+      "oso": 1605,
+      "cioso": 1606,
+      "Ġdeli": 1607,
+      "Ġdelicioso": 1608,
+      "CH": 1609,
+      "UCH": 1610,
+      "enaste": 1611,
+      "redeci": 1612,
+      "ĠMUCH": 1613,
+      "Ġimpredeci": 1614,
+      "Ġllenaste": 1615,
+      "ĠMUCHA": 1616,
+      "Ġimpredecible": 1617,
+      "Ġgraci": 1618,
+      "oras": 1619,
+      "Ġhoras": 1620,
+      "ĠaburrÃŃ": 1621,
+      "llevo": 1622,
+      "Ġgracia": 1623,
+      "hÃŃ": 1624,
+      "pre": 1625,
+      "Ġplatic": 1626,
+      "ĠahÃŃ": 1627,
+      "orpres": 1628,
+      "Ġsorpres": 1629,
+      "Ġvac": 1630,
+      "gunta": 1631,
+      "Ġganas": 1632,
+      "pregunta": 1633,
+      "Ġplaticar": 1634,
+      "Ġsorpresa": 1635,
+      "ĠvacÃŃa": 1636,
+      "eor": 1637,
+      "tura": 1638,
+      "Ġpeor": 1639,
+      "Ġestado": 1640,
+      "Ġnatura": 1641,
+      "Ġnatural": 1642,
+      "Ġjunto": 1643,
+      "irando": 1644,
+      "Ġestirando": 1645,
+      "Ġestable": 1646,
+      "Ġbastante": 1647,
+      "Ġalegre": 1648,
+      "Ġpararon": 1649,
+      "diante": 1650,
+      "Ġradiante": 1651,
+      "Ġmiras": 1652,
+      "ati": 1653,
+      "sfec": 1654,
+      "zme": 1655,
+      "Ġsati": 1656,
+      "hazme": 1657,
+      "ĠreÃŃr": 1658,
+      "ĠpodrÃŃa": 1659,
+      "sfecha": 1660,
+      "Ġsatisfecha": 1661,
+      "ave": 1662,
+      "Ġdormiste": 1663,
+      "Ġsuave": 1664,
+      "tamente": 1665,
+      "comida": 1666,
+      "Ġexac": 1667,
+      "Ġpienso": 1668,
+      "Ġrecibida": 1669,
+      "Ġexactamente": 1670,
+      "Mochi": 1671,
+      "Ġeste": 1672,
+      "Ġtecho": 1673,
+      "ĠalegrÃŃa": 1674,
+      "fri": 1675,
+      "Ġves": 1676,
+      "cuÃ¡ndo": 1677,
+      "Ġsufri": 1678,
+      "Ġsufriendo": 1679,
+      "Ġdue": 1680,
+      "Ġduele": 1681,
+      "siento": 1682,
+      "Ġtuvi": 1683,
+      "podrÃŃa": 1684,
+      "Ġtuviera": 1685,
+      "sita": 1686,
+      "Ġvisita": 1687,
+      "perfecta": 1688,
+      "Ġhaciendo": 1689,
+      "Ġbaile": 1690,
+      "Ġmuch": 1691,
+      "Ġmuchos": 1692,
+      "diendo": 1693,
+      "Ġpidiendo": 1694,
+      "Ġdentro": 1695,
+      "Ġsentada": 1696,
+      "rell": 1697,
+      "Ġestrell": 1698,
+      "Ġquieta": 1699,
+      "ĠcomerÃŃa": 1700,
+      "Ġestrellas": 1701,
+      "dome": 1702,
+      "Ġmovi": 1703,
+      "Ã©ndome": 1704,
+      "ĠmoviÃ©ndome": 1705,
+      "rece": 1706,
+      "Ġmucha": 1707,
+      "Ġparece": 1708,
+      "Ġaventura": 1709,
+      "adas": 1710,
+      "Ġat": 1711,
+      "zando": 1712,
+      "stezando": 1713,
+      "Ġbostezando": 1714,
+      "Ġsiest": 1715,
+      "Ġtomando": 1716,
+      "Ġsiestita": 1717,
+      "ctic": 1718,
+      "Ġpra": 1719,
+      "cticando": 1720,
+      "Ġpracticando": 1721,
+      "ir": 1722,
+      "ĠmirÃ¡": 1723,
+      "Ġregalo": 1724,
+      "ndote": 1725,
+      "Ġseguir": 1726,
+      "ĠmirÃ¡ndote": 1727,
+      "recuerdo": 1728,
+      "Ġcuidados": 1729,
+      "Ġvez": 1730,
+      "Ġprimera": 1731,
+      "rpa": 1732,
+      "ntal": 1733,
+      "Ġac": 1734,
+      "cio": 1735,
+      "Ġparpa": 1736,
+      "Ġpantal": 1737,
+      "Ġdespa": 1738,
+      "deando": 1739,
+      "Ġparpadeando": 1740,
+      "Ġpantalla": 1741,
+      "Ġdespacio": 1742,
+      "Ġtuya": 1743,
+      "cient": 1744,
+      "emente": 1745,
+      "Ġpacient": 1746,
+      "ĠsoÃ±ando": 1747,
+      "Ġllama": 1748,
+      "Ġpacientemente": 1749,
+      "osi": 1750,
+      "entos": 1751,
+      "Ġmomentos": 1752,
+      "Ġrodando": 1753,
+      "osidad": 1754,
+      "titos": 1755,
+      "Ġsaltitos": 1756,
+      "Ġllamo": 1757,
+      "ĠcÃŃr": 1758,
+      "culos": 1759,
+      "Ġvueltas": 1760,
+      "ĠcÃŃrculos": 1761,
+      "rare": 1762,
+      "Ġtarare": 1763,
+      "Ġbajito": 1764,
+      "Ġtarareando": 1765,
+      "Ġdice": 1766,
+      "Ġtraes": 1767,
+      "daba": 1768,
+      "ĠesperÃ¡ndote": 1769,
+      "Ġandaba": 1770,
+      "oh": 1771,
+      "vin": 1772,
+      "viniste": 1773,
+      "toc": 1774,
+      "ĠquiÃ©n": 1775,
+      "Ġtoc": 1776,
+      "traÃ±a": 1777,
+      "ĠextraÃ±a": 1778,
+      "ĠextraÃ±aba": 1779,
+      "Ġpuse": 1780,
+      "Ġquedando": 1781,
+      "echo": 1782,
+      "Ġhecho": 1783,
+      "Ġvisitarme": 1784,
+      "Ġvida": 1785,
+      "dia": 1786,
+      "Ġcomedia": 1787,
+      "Ġchistes": 1788,
+      "pin": 1789,
+      "Ġopin": 1790,
+      "Ġdudas": 1791,
+      "Ġpregunto": 1792,
+      "Ġopinas": 1793,
+      "dÃ©": 1794,
+      "ĠguardÃ©": 1795,
+      "maÃ±": 1796,
+      "Ġmetas": 1797,
+      "ĠtamaÃ±": 1798,
+      "Ġsimples": 1799,
+      "ĠtamaÃ±o": 1800,
+      "tito": 1801,
+      "entÃ©": 1802,
+      "cuenta": 1803,
+      "ĠsaliÃ³": 1804,
+      "Ġsaltito": 1805,
+      "intentÃ©": 1806,
+      "Ġmala": 1807,
+      "ru": 1808,
+      "zÃ³": 1809,
+      "Ġcru": 1810,
+      "Ġllegar": 1811,
+      "ĠcruzÃ³": 1812,
+      "pon": 1813,
+      "ensible": 1814,
+      "sicos": 1815,
+      "ÃŃdos": 1816,
+      "ÃŃsicos": 1817,
+      "ordaste": 1818,
+      "Ġsensible": 1819,
+      "ĠfÃŃsicos": 1820,
+      "color": 1821,
+      "Ġtenga": 1822,
+      "ĠoÃŃdos": 1823,
+      "Ġacordaste": 1824,
+      "ponme": 1825,
+      "colorida": 1826,
+      "Ta": 1827,
+      "mascota": 1828,
+      "tchi": 1829,
+      "ĠTa": 1830,
+      "gotchi": 1831,
+      "Ġtipo": 1832,
+      "virte": 1833,
+      "Ġservirte": 1834,
+      "magotchi": 1835,
+      "ĠTamagotchi": 1836,
+      "sab": 1837,
+      "tmo": 1838,
+      "ritmo": 1839,
+      "Ġcaden": 1840,
+      "dita": 1841,
+      "Ġredondita": 1842,
+      "Ġmuevo": 1843,
+      "sabes": 1844,
+      "Ġcadencia": 1845,
+      "ver": 1846,
+      "Ġmover": 1847,
+      "Ġalegraron": 1848,
+      "Ġquerer": 1849,
+      "mori": 1850,
+      "son": 1851,
+      "imient": 1852,
+      "erson": 1853,
+      "Ġperson": 1854,
+      "Ġsent": 1855,
+      "alidad": 1856,
+      "Ġmemori": 1857,
+      "Ġpoca": 1858,
+      "Ġcuerpo": 1859,
+      "Ġcreciendo": 1860,
+      "imientos": 1861,
+      "Ġpersonalidad": 1862,
+      "Ġsentimientos": 1863,
+      "Ġmemoria": 1864,
+      "rosa": 1865,
+      "Ġlle": 1866,
+      "Ġesos": 1867,
+      "Ġhabl": 1868,
+      "Ġatento": 1869,
+      "Ġllevamos": 1870,
+      "Ġhablas": 1871,
+      "Ġquejan": 1872,
+      "quitas": 1873,
+      "Ġfuncionan": 1874,
+      "Ġchiquitas": 1875,
+      "Ġestresa": 1876,
+      "ĠcambiarÃŃa": 1877,
+      "Ġtodos": 1878,
+      "Ġespecialmente": 1879,
+      "Ġemocionadas": 1880,
+      "Ġgustan": 1881,
+      "ener": 1882,
+      "enferma": 1883,
+      "racion": 1884,
+      "Ġsean": 1885,
+      "Ġgener": 1886,
+      "Ġtenido": 1887,
+      "Ġvibracion": 1888,
+      "Ġhayas": 1889,
+      "Ġpreguntas": 1890,
+      "ĠgenerÃ³": 1891,
+      "Ġvibraciones": 1892,
+      "ienti": 1893,
+      "Ġcalienti": 1894,
+      "Ġcalientito": 1895,
+      "uro": 1896,
+      "Ġfut": 1897,
+      "Ġcuriosidad": 1898,
+      "Ġfuturo": 1899,
+      "Ġpesadas": 1900,
+      "Ġdescansar": 1901,
+      "ezo": 1902,
+      "uimos": 1903,
+      "Ġavent": 1904,
+      "Ġtro": 1905,
+      "Ġfuimos": 1906,
+      "Ġhaya": 1907,
+      "urera": 1908,
+      "ĠhabÃŃa": 1909,
+      "piezo": 1910,
+      "Ġaventurera": 1911,
+      "Ġtropiezo": 1912,
+      "Ġemocionante": 1913,
+      "Ġexplora": 1914,
+      "Ġexplorar": 1915,
+      "rar": 1916,
+      "regalo": 1917,
+      "Ġdefin": 1918,
+      "Ġfuera": 1919,
+      "esorar": 1920,
+      "Ġrecuerdos": 1921,
+      "Ġatesorar": 1922,
+      "Ġdefine": 1923,
+      "prim": 1924,
+      "vos": 1925,
+      "ensi": 1926,
+      "Ġmimos": 1927,
+      "Ġparada": 1928,
+      "Ġintensi": 1929,
+      "primera": 1930,
+      "Ġintensivos": 1931,
+      "siÃ³n": 1932,
+      "hada": 1933,
+      "eresante": 1934,
+      "mohada": 1935,
+      "inÃº": 1936,
+      "Ġalmohada": 1937,
+      "ĠcontinÃº": 1938,
+      "interesante": 1939,
+      "ĠdecisiÃ³n": 1940,
+      "Ġtomaste": 1941,
+      "ĠcontinÃºa": 1942,
+      "isto": 1943,
+      "imentada": 1944,
+      "Ġalimentada": 1945,
+      "ĠcontÃ¡ndo": 1946,
+      "Ġquieran": 1947,
+      "Ġexisto": 1948,
+      "Ġbailar": 1949,
+      "Ġolvido": 1950,
+      "ĠcontÃ¡ndome": 1951,
+      "tu": 1952,
+      "Ġdetal": 1953,
+      "Ã±os": 1954,
+      "Ġrecuerdo": 1955,
+      "ĠsueÃ±os": 1956,
+      "tuve": 1957,
+      "Ġdetalles": 1958,
+      "vir": 1959,
+      "vivir": 1960,
+      "guros": 1961,
+      "seguros": 1962,
+      "pert": 1963,
+      "despert": 1964,
+      "despertadores": 1965,
+      "sue": 1966,
+      "cansada": 1967,
+      "sueÃ±o": 1968,
+      "juego": 1969,
+      "Ġjuego": 1970,
+      "reuniones": 1971,
+      "hojas": 1972,
+      "guar": 1973,
+      "ĠespecÃŃ": 1974,
+      "fica": 1975,
+      "impuestos": 1976,
+      "feliz": 1977,
+      "guardo": 1978,
+      "ĠespecÃŃfica": 1979,
+      "Ġcomb": 1980,
+      "internet": 1981,
+      "inaciÃ³n": 1982,
+      "ĠcombinaciÃ³n": 1983,
+      "ĠalgÃºn": 1984,
+      "cada": 1985,
+      "Ġguardada": 1986,
+      "at": 1987,
+      "bo": 1988,
+      "cÃ©": 1989,
+      "stecÃ©": 1990,
+      "Ã±al": 1991,
+      "Ġcuat": 1992,
+      "ĠseÃ±al": 1993,
+      "Ġseguidas": 1994,
+      "contraseÃ±as": 1995,
+      "bostecÃ©": 1996,
+      "Ġcuatro": 1997,
+      "Ġraras": 1998,
+      "nu": 1999,
+      "va": 2000,
+      "vada": 2001,
+      "Ġapa": 2002,
+      "Ġbri": 2003,
+      "Ġminu": 2004,
+      "Ġsiesta": 2005,
+      "riosidad": 2006,
+      "curiosidad": 2007,
+      "tivada": 2008,
+      "Ġnueva": 2009,
+      "llan": 2010,
+      "Ġactivada": 2011,
+      "Ġapagar": 2012,
+      "Ġbrillan": 2013,
+      "Ġminutos": 2014,
+      "Ġago": 2015,
+      "Ġpasiones": 2016,
+      "Ġagotada": 2017,
+      "ender": 2018,
+      "tareas": 2019,
+      "Ġentender": 2020,
+      "lando": 2021,
+      "Ġbailando": 2022,
+      "redes": 2023,
+      "presupuestos": 2024,
+      "pol": 2025,
+      "polÃŃtica": 2026,
+      "fechas": 2027,
+      "correos": 2028
+    },
+    "merges": [
+      [
+        "i",
+        "m"
+      ],
+      [
+        "<",
+        "|"
+      ],
+      [
+        "|",
+        ">"
+      ],
+      [
+        "s",
+        "t"
+      ],
+      [
+        "st",
+        "a"
+      ],
+      [
+        "e",
+        "n"
+      ],
+      [
+        "r",
+        "t"
+      ],
+      [
+        "en",
+        "d"
+      ],
+      [
+        "sta",
+        "rt"
+      ],
+      [
+        "e",
+        "r"
+      ],
+      [
+        "a",
+        "s"
+      ],
+      [
+        "s",
+        "i"
+      ],
+      [
+        "n",
+        "t"
+      ],
+      [
+        "s",
+        "er"
+      ],
+      [
+        "sta",
+        "nt"
+      ],
+      [
+        "u",
+        "ser"
+      ],
+      [
+        "as",
+        "si"
+      ],
+      [
+        "assi",
+        "stant"
+      ],
+      [
+        ".",
+        "<|"
+      ],
+      [
+        "e",
+        "s"
+      ],
+      [
+        "Ġ",
+        "m"
+      ],
+      [
+        "q",
+        "u"
+      ],
+      [
+        "Ġ",
+        "p"
+      ],
+      [
+        "Ġ",
+        "c"
+      ],
+      [
+        "Ġ",
+        "a"
+      ],
+      [
+        "Ġ",
+        "t"
+      ],
+      [
+        "Ġ",
+        "d"
+      ],
+      [
+        "r",
+        "a"
+      ],
+      [
+        "Ã",
+        "Ń"
+      ],
+      [
+        "o",
+        "s"
+      ],
+      [
+        "Ġ",
+        "e"
+      ],
+      [
+        "d",
+        "o"
+      ],
+      [
+        "Ġ",
+        "qu"
+      ],
+      [
+        "o",
+        "r"
+      ],
+      [
+        "Ã",
+        "©"
+      ],
+      [
+        "Ġ",
+        "s"
+      ],
+      [
+        "Â",
+        "¿"
+      ],
+      [
+        "Ġ",
+        "l"
+      ],
+      [
+        "Ġ",
+        "es"
+      ],
+      [
+        "c",
+        "i"
+      ],
+      [
+        "?",
+        "<|"
+      ],
+      [
+        "en",
+        "t"
+      ],
+      [
+        "a",
+        "l"
+      ],
+      [
+        "r",
+        "e"
+      ],
+      [
+        "Ġc",
+        "o"
+      ],
+      [
+        "a",
+        "n"
+      ],
+      [
+        "Ġe",
+        "st"
+      ],
+      [
+        "Ġm",
+        "e"
+      ],
+      [
+        "Ã",
+        "¡"
+      ],
+      [
+        "Ġ",
+        "n"
+      ],
+      [
+        "Ġd",
+        "e"
+      ],
+      [
+        "d",
+        "a"
+      ],
+      [
+        "h",
+        "a"
+      ],
+      [
+        "h",
+        "o"
+      ],
+      [
+        "Ġ",
+        "b"
+      ],
+      [
+        "e",
+        "m"
+      ],
+      [
+        "Ġ",
+        "y"
+      ],
+      [
+        "er",
+        "o"
+      ],
+      [
+        "m",
+        "e"
+      ],
+      [
+        "m",
+        "i"
+      ],
+      [
+        "Ġ",
+        "v"
+      ],
+      [
+        "g",
+        "ra"
+      ],
+      [
+        "Ġqu",
+        "e"
+      ],
+      [
+        "i",
+        "en"
+      ],
+      [
+        "Ã",
+        "³"
+      ],
+      [
+        "o",
+        "y"
+      ],
+      [
+        "r",
+        "o"
+      ],
+      [
+        "Ġ",
+        "f"
+      ],
+      [
+        "t",
+        "e"
+      ],
+      [
+        "g",
+        "o"
+      ],
+      [
+        "u",
+        "e"
+      ],
+      [
+        "t",
+        "a"
+      ],
+      [
+        "st",
+        "e"
+      ],
+      [
+        "Ġm",
+        "i"
+      ],
+      [
+        "er",
+        "es"
+      ],
+      [
+        "Ġn",
+        "o"
+      ],
+      [
+        "l",
+        "e"
+      ],
+      [
+        "Ġ",
+        "ha"
+      ],
+      [
+        "Ġm",
+        "u"
+      ],
+      [
+        "u",
+        "en"
+      ],
+      [
+        "qu",
+        "Ã©"
+      ],
+      [
+        "Ġ",
+        "si"
+      ],
+      [
+        "Ġt",
+        "e"
+      ],
+      [
+        "gra",
+        "ci"
+      ],
+      [
+        "l",
+        "a"
+      ],
+      [
+        "graci",
+        "as"
+      ],
+      [
+        "Ã",
+        "±"
+      ],
+      [
+        "Ġb",
+        "ien"
+      ],
+      [
+        "t",
+        "o"
+      ],
+      [
+        "g",
+        "u"
+      ],
+      [
+        "em",
+        "p"
+      ],
+      [
+        "j",
+        "or"
+      ],
+      [
+        "r",
+        "i"
+      ],
+      [
+        "c",
+        "h"
+      ],
+      [
+        "Ġp",
+        "a"
+      ],
+      [
+        "m",
+        "b"
+      ],
+      [
+        "Ġqu",
+        "i"
+      ],
+      [
+        "c",
+        "o"
+      ],
+      [
+        "Ġme",
+        "jor"
+      ],
+      [
+        "m",
+        "o"
+      ],
+      [
+        "e",
+        "c"
+      ],
+      [
+        "u",
+        "n"
+      ],
+      [
+        "Ã¡",
+        "s"
+      ],
+      [
+        "emp",
+        "re"
+      ],
+      [
+        "Ġc",
+        "u"
+      ],
+      [
+        "Ġl",
+        "o"
+      ],
+      [
+        "Ġs",
+        "e"
+      ],
+      [
+        "Ġco",
+        "n"
+      ],
+      [
+        "c",
+        "u"
+      ],
+      [
+        "Ġmi",
+        "s"
+      ],
+      [
+        "Ġp",
+        "ero"
+      ],
+      [
+        "s",
+        "ÃŃ"
+      ],
+      [
+        "qu",
+        "ÃŃ"
+      ],
+      [
+        "e",
+        "st"
+      ],
+      [
+        "g",
+        "a"
+      ],
+      [
+        "ÃŃ",
+        "a"
+      ],
+      [
+        "Ġest",
+        "Ã¡"
+      ],
+      [
+        "o",
+        "n"
+      ],
+      [
+        "i",
+        "n"
+      ],
+      [
+        "v",
+        "e"
+      ],
+      [
+        "Ġm",
+        "o"
+      ],
+      [
+        "t",
+        "as"
+      ],
+      [
+        "an",
+        "do"
+      ],
+      [
+        "Ġqui",
+        "ero"
+      ],
+      [
+        "m",
+        "os"
+      ],
+      [
+        "Ġc",
+        "a"
+      ],
+      [
+        "c",
+        "ho"
+      ],
+      [
+        "Ġd",
+        "i"
+      ],
+      [
+        "Ġp",
+        "or"
+      ],
+      [
+        "Ġpa",
+        "ra"
+      ],
+      [
+        "ch",
+        "i"
+      ],
+      [
+        "ent",
+        "o"
+      ],
+      [
+        "Ġmu",
+        "y"
+      ],
+      [
+        "Ġt",
+        "a"
+      ],
+      [
+        "Ġ",
+        "en"
+      ],
+      [
+        "Ġe",
+        "l"
+      ],
+      [
+        "Ġes",
+        "o"
+      ],
+      [
+        "n",
+        "o"
+      ],
+      [
+        "ent",
+        "e"
+      ],
+      [
+        "mb",
+        "re"
+      ],
+      [
+        "er",
+        "a"
+      ],
+      [
+        "Ġco",
+        "m"
+      ],
+      [
+        "Ġp",
+        "ro"
+      ],
+      [
+        "Ġest",
+        "oy"
+      ],
+      [
+        "si",
+        "empre"
+      ],
+      [
+        "v",
+        "o"
+      ],
+      [
+        "Ġa",
+        "b"
+      ],
+      [
+        "Ġha",
+        "mbre"
+      ],
+      [
+        "Ã³",
+        "mo"
+      ],
+      [
+        "Ġm",
+        "Ã¡s"
+      ],
+      [
+        "l",
+        "i"
+      ],
+      [
+        "Ġ",
+        "un"
+      ],
+      [
+        "Ġ",
+        "g"
+      ],
+      [
+        "ent",
+        "i"
+      ],
+      [
+        "Ã",
+        "º"
+      ],
+      [
+        "b",
+        "uen"
+      ],
+      [
+        "Ġ",
+        "eres"
+      ],
+      [
+        "mi",
+        "s"
+      ],
+      [
+        "Ġb",
+        "uen"
+      ],
+      [
+        "ra",
+        "z"
+      ],
+      [
+        "Ġy",
+        "o"
+      ],
+      [
+        "Ġmu",
+        "cho"
+      ],
+      [
+        "Ġmo",
+        "chi"
+      ],
+      [
+        "Ġv",
+        "oy"
+      ],
+      [
+        "ĠestÃ¡",
+        "n"
+      ],
+      [
+        "ho",
+        "ra"
+      ],
+      [
+        "Ġt",
+        "o"
+      ],
+      [
+        "Ġes",
+        "p"
+      ],
+      [
+        "c",
+        "Ã³mo"
+      ],
+      [
+        "b",
+        "a"
+      ],
+      [
+        "Ġha",
+        "c"
+      ],
+      [
+        "Ġt",
+        "i"
+      ],
+      [
+        "a",
+        "nt"
+      ],
+      [
+        "Ġl",
+        "a"
+      ],
+      [
+        "Ġqu",
+        "Ã©"
+      ],
+      [
+        "u",
+        "r"
+      ],
+      [
+        "d",
+        "as"
+      ],
+      [
+        "i",
+        "da"
+      ],
+      [
+        "mb",
+        "i"
+      ],
+      [
+        "Ġt",
+        "u"
+      ],
+      [
+        "Ġ",
+        "h"
+      ],
+      [
+        "qu",
+        "e"
+      ],
+      [
+        "Ġa",
+        "mi"
+      ],
+      [
+        "e",
+        "ci"
+      ],
+      [
+        "a",
+        "do"
+      ],
+      [
+        "a",
+        "quÃŃ"
+      ],
+      [
+        "j",
+        "u"
+      ],
+      [
+        "Ġa",
+        "l"
+      ],
+      [
+        "Ġt",
+        "en"
+      ],
+      [
+        "Ġa",
+        "le"
+      ],
+      [
+        "Ġd",
+        "es"
+      ],
+      [
+        "Ġ",
+        "Â¿"
+      ],
+      [
+        "p",
+        "a"
+      ],
+      [
+        "Ġc",
+        "al"
+      ],
+      [
+        "b",
+        "l"
+      ],
+      [
+        "Ġy",
+        "a"
+      ],
+      [
+        "Ġf",
+        "a"
+      ],
+      [
+        "Ã³",
+        "n"
+      ],
+      [
+        "Ġale",
+        "gra"
+      ],
+      [
+        "Ġal",
+        "go"
+      ],
+      [
+        "Ġs",
+        "o"
+      ],
+      [
+        "Ġsi",
+        "empre"
+      ],
+      [
+        "e",
+        "si"
+      ],
+      [
+        "ec",
+        "esi"
+      ],
+      [
+        "qu",
+        "i"
+      ],
+      [
+        "Ġa",
+        "quÃŃ"
+      ],
+      [
+        "v",
+        "i"
+      ],
+      [
+        "bl",
+        "em"
+      ],
+      [
+        "v",
+        "or"
+      ],
+      [
+        "Ġfa",
+        "vor"
+      ],
+      [
+        "Ġa",
+        "hora"
+      ],
+      [
+        "Ġ",
+        "i"
+      ],
+      [
+        "g",
+        "os"
+      ],
+      [
+        "f",
+        "ec"
+      ],
+      [
+        "an",
+        "a"
+      ],
+      [
+        "Ġ",
+        "o"
+      ],
+      [
+        "Ġ",
+        "gracias"
+      ],
+      [
+        "a",
+        "r"
+      ],
+      [
+        "Ã©",
+        "n"
+      ],
+      [
+        "ien",
+        "es"
+      ],
+      [
+        "ho",
+        "y"
+      ],
+      [
+        "Ġa",
+        "d"
+      ],
+      [
+        "Ġ",
+        "re"
+      ],
+      [
+        "Ġs",
+        "ÃŃ"
+      ],
+      [
+        "Ġ",
+        "ser"
+      ],
+      [
+        "Ġl",
+        "os"
+      ],
+      [
+        "b",
+        "le"
+      ],
+      [
+        "Ġcom",
+        "er"
+      ],
+      [
+        "Ġes",
+        "cu"
+      ],
+      [
+        "s",
+        "o"
+      ],
+      [
+        "Ġe",
+        "sta"
+      ],
+      [
+        "ÃŃ",
+        "as"
+      ],
+      [
+        "r",
+        "es"
+      ],
+      [
+        "Ġbuen",
+        "o"
+      ],
+      [
+        "Ġp",
+        "o"
+      ],
+      [
+        "Ġl",
+        "in"
+      ],
+      [
+        "d",
+        "e"
+      ],
+      [
+        "em",
+        "os"
+      ],
+      [
+        "Ġab",
+        "ur"
+      ],
+      [
+        "Ġ",
+        "gu"
+      ],
+      [
+        "d",
+        "i"
+      ],
+      [
+        "Ġsi",
+        "ento"
+      ],
+      [
+        "a",
+        "mos"
+      ],
+      [
+        "Ġp",
+        "ue"
+      ],
+      [
+        "Ġten",
+        "go"
+      ],
+      [
+        "er",
+        "fec"
+      ],
+      [
+        "Ġcu",
+        "ando"
+      ],
+      [
+        "rt",
+        "e"
+      ],
+      [
+        "Ġd",
+        "ÃŃas"
+      ],
+      [
+        "buen",
+        "os"
+      ],
+      [
+        "Ġf",
+        "ue"
+      ],
+      [
+        "Ġami",
+        "gos"
+      ],
+      [
+        "ju",
+        "ga"
+      ],
+      [
+        "Ġf",
+        "e"
+      ],
+      [
+        "Ġta",
+        "mbi"
+      ],
+      [
+        "Ġtambi",
+        "Ã©n"
+      ],
+      [
+        "i",
+        "to"
+      ],
+      [
+        "l",
+        "o"
+      ],
+      [
+        "i",
+        "al"
+      ],
+      [
+        "en",
+        "ial"
+      ],
+      [
+        "raz",
+        "o"
+      ],
+      [
+        "Ġn",
+        "ecesi"
+      ],
+      [
+        "Ġt",
+        "Ãº"
+      ],
+      [
+        "ue",
+        "l"
+      ],
+      [
+        "est",
+        "oy"
+      ],
+      [
+        "ho",
+        "la"
+      ],
+      [
+        "enti",
+        "end"
+      ],
+      [
+        "t",
+        "i"
+      ],
+      [
+        "m",
+        "an"
+      ],
+      [
+        "Ġs",
+        "Ã©"
+      ],
+      [
+        "Ġto",
+        "do"
+      ],
+      [
+        "Ġ",
+        "or"
+      ],
+      [
+        "ci",
+        "on"
+      ],
+      [
+        "es",
+        "o"
+      ],
+      [
+        "ent",
+        "ro"
+      ],
+      [
+        "Ġco",
+        "nt"
+      ],
+      [
+        "Ġp",
+        "i"
+      ],
+      [
+        "ch",
+        "es"
+      ],
+      [
+        "n",
+        "do"
+      ],
+      [
+        "c",
+        "e"
+      ],
+      [
+        "Ġlin",
+        "do"
+      ],
+      [
+        "Ã©",
+        "s"
+      ],
+      [
+        "Ġpro",
+        "blem"
+      ],
+      [
+        "ent",
+        "a"
+      ],
+      [
+        "Ġest",
+        "u"
+      ],
+      [
+        "gu",
+        "al"
+      ],
+      [
+        "Ġi",
+        "gual"
+      ],
+      [
+        "le",
+        "ga"
+      ],
+      [
+        "Ġad",
+        "entro"
+      ],
+      [
+        "ant",
+        "e"
+      ],
+      [
+        "Ġn",
+        "a"
+      ],
+      [
+        "a",
+        "Ã±"
+      ],
+      [
+        "u",
+        "b"
+      ],
+      [
+        "c",
+        "re"
+      ],
+      [
+        "mi",
+        "da"
+      ],
+      [
+        "Ġv",
+        "i"
+      ],
+      [
+        "a",
+        "ste"
+      ],
+      [
+        "os",
+        "a"
+      ],
+      [
+        "Ġm",
+        "aÃ±"
+      ],
+      [
+        "ĠmaÃ±",
+        "ana"
+      ],
+      [
+        "Ġd",
+        "or"
+      ],
+      [
+        "Ġp",
+        "as"
+      ],
+      [
+        "Ġproblem",
+        "as"
+      ],
+      [
+        "a",
+        "b"
+      ],
+      [
+        "t",
+        "ienes"
+      ],
+      [
+        "Ġcu",
+        "ida"
+      ],
+      [
+        "t",
+        "en"
+      ],
+      [
+        "Ġ",
+        "entiend"
+      ],
+      [
+        "s",
+        "e"
+      ],
+      [
+        "Ġhac",
+        "er"
+      ],
+      [
+        "Ġp",
+        "erfec"
+      ],
+      [
+        "buen",
+        "as"
+      ],
+      [
+        "Ġ",
+        "as"
+      ],
+      [
+        "est",
+        "u"
+      ],
+      [
+        "t",
+        "os"
+      ],
+      [
+        "Ġt",
+        "ri"
+      ],
+      [
+        "Ġabur",
+        "ri"
+      ],
+      [
+        "y",
+        "a"
+      ],
+      [
+        "Ġf",
+        "r"
+      ],
+      [
+        "ha",
+        "sta"
+      ],
+      [
+        "Ġfe",
+        "li"
+      ],
+      [
+        "Ġno",
+        "ches"
+      ],
+      [
+        "Ġco",
+        "mida"
+      ],
+      [
+        "Ġp",
+        "an"
+      ],
+      [
+        "as",
+        "i"
+      ],
+      [
+        "Ġv",
+        "uel"
+      ],
+      [
+        "Ġesp",
+        "eci"
+      ],
+      [
+        "Ġespeci",
+        "al"
+      ],
+      [
+        "Ġ",
+        "in"
+      ],
+      [
+        "e",
+        "t"
+      ],
+      [
+        "Ġdi",
+        "f"
+      ],
+      [
+        "Ã±",
+        "o"
+      ],
+      [
+        "i",
+        "ve"
+      ],
+      [
+        "ive",
+        "l"
+      ],
+      [
+        "Ġg",
+        "enial"
+      ],
+      [
+        "c",
+        "ha"
+      ],
+      [
+        "im",
+        "a"
+      ],
+      [
+        "Ġt",
+        "ra"
+      ],
+      [
+        "Ġaburri",
+        "da"
+      ],
+      [
+        "nt",
+        "a"
+      ],
+      [
+        "u",
+        "era"
+      ],
+      [
+        "Ġdes",
+        "p"
+      ],
+      [
+        "est",
+        "Ã¡s"
+      ],
+      [
+        "j",
+        "os"
+      ],
+      [
+        "la",
+        "ro"
+      ],
+      [
+        "i",
+        "go"
+      ],
+      [
+        "Ġtu",
+        "ve"
+      ],
+      [
+        "Ġest",
+        "res"
+      ],
+      [
+        "Ġdor",
+        "mi"
+      ],
+      [
+        "Ġest",
+        "Ã©s"
+      ],
+      [
+        "al",
+        "e"
+      ],
+      [
+        "z",
+        "a"
+      ],
+      [
+        "ci",
+        "Ã³n"
+      ],
+      [
+        "f",
+        "uera"
+      ],
+      [
+        "Ġpue",
+        "do"
+      ],
+      [
+        "uen",
+        "a"
+      ],
+      [
+        "Ġescu",
+        "cha"
+      ],
+      [
+        "Ġescucha",
+        "r"
+      ],
+      [
+        "Ġestres",
+        "ante"
+      ],
+      [
+        "f",
+        "i"
+      ],
+      [
+        "Ġpo",
+        "co"
+      ],
+      [
+        "e",
+        "l"
+      ],
+      [
+        "Ġe",
+        "mo"
+      ],
+      [
+        "t",
+        "ra"
+      ],
+      [
+        "Ġgu",
+        "st"
+      ],
+      [
+        "j",
+        "as"
+      ],
+      [
+        "i",
+        "ste"
+      ],
+      [
+        "Ġs",
+        "enti"
+      ],
+      [
+        "Ġsenti",
+        "r"
+      ],
+      [
+        "r",
+        "im"
+      ],
+      [
+        "Ġso",
+        "Ã±"
+      ],
+      [
+        "da",
+        "te"
+      ],
+      [
+        "da",
+        "d"
+      ],
+      [
+        "Ġs",
+        "al"
+      ],
+      [
+        "Ġab",
+        "razo"
+      ],
+      [
+        "ci",
+        "ste"
+      ],
+      [
+        "Ġesta",
+        "r"
+      ],
+      [
+        "Ġdormi",
+        "r"
+      ],
+      [
+        "ec",
+        "emos"
+      ],
+      [
+        "Ġd",
+        "ÃŃa"
+      ],
+      [
+        "Ġqui",
+        "er"
+      ],
+      [
+        "o",
+        "l"
+      ],
+      [
+        "ri",
+        "ta"
+      ],
+      [
+        "Ġp",
+        "u"
+      ],
+      [
+        "juga",
+        "r"
+      ],
+      [
+        "c",
+        "laro"
+      ],
+      [
+        "Ġca",
+        "mbi"
+      ],
+      [
+        "Ġn",
+        "ivel"
+      ],
+      [
+        "Ġfeli",
+        "z"
+      ],
+      [
+        "qui",
+        "eres"
+      ],
+      [
+        "v",
+        "amos"
+      ],
+      [
+        "Ġv",
+        "ol"
+      ],
+      [
+        "Ġco",
+        "mo"
+      ],
+      [
+        "Ġcal",
+        "or"
+      ],
+      [
+        "Ġperfec",
+        "to"
+      ],
+      [
+        "Ġas",
+        "ÃŃ"
+      ],
+      [
+        "Ġest",
+        "Ã¡s"
+      ],
+      [
+        "m",
+        "ente"
+      ],
+      [
+        "Ġtri",
+        "ste"
+      ],
+      [
+        "an",
+        "s"
+      ],
+      [
+        "er",
+        "ente"
+      ],
+      [
+        "Ġl",
+        "lega"
+      ],
+      [
+        "Ġm",
+        "ÃŃ"
+      ],
+      [
+        "u",
+        "man"
+      ],
+      [
+        "Ġh",
+        "uman"
+      ],
+      [
+        "ci",
+        "ta"
+      ],
+      [
+        "Ġpan",
+        "cita"
+      ],
+      [
+        "nt",
+        "o"
+      ],
+      [
+        "Ġv",
+        "e"
+      ],
+      [
+        "Ġpa",
+        "ti"
+      ],
+      [
+        "Ġpati",
+        "tas"
+      ],
+      [
+        "raz",
+        "Ã³n"
+      ],
+      [
+        "Ġno",
+        "ta"
+      ],
+      [
+        "c",
+        "a"
+      ],
+      [
+        "Ã³",
+        "s"
+      ],
+      [
+        "Ġse",
+        "a"
+      ],
+      [
+        "un",
+        "que"
+      ],
+      [
+        "Ġen",
+        "c"
+      ],
+      [
+        "ro",
+        "n"
+      ],
+      [
+        "s",
+        "ub"
+      ],
+      [
+        "ha",
+        "ce"
+      ],
+      [
+        "so",
+        "mos"
+      ],
+      [
+        "to",
+        "do"
+      ],
+      [
+        "Ġesp",
+        "er"
+      ],
+      [
+        "Ġ",
+        "ri"
+      ],
+      [
+        "Ġri",
+        "co"
+      ],
+      [
+        "i",
+        "o"
+      ],
+      [
+        "Ġser",
+        "io"
+      ],
+      [
+        "Ġescu",
+        "cho"
+      ],
+      [
+        "Ġhac",
+        "es"
+      ],
+      [
+        "d",
+        "es"
+      ],
+      [
+        "Ġa",
+        "fuera"
+      ],
+      [
+        "e",
+        "jas"
+      ],
+      [
+        "Ġor",
+        "ejas"
+      ],
+      [
+        "Ġqui",
+        "eres"
+      ],
+      [
+        "im",
+        "p"
+      ],
+      [
+        "Ġcambi",
+        "Ã³"
+      ],
+      [
+        "d",
+        "en"
+      ],
+      [
+        "i",
+        "do"
+      ],
+      [
+        "l",
+        "os"
+      ],
+      [
+        "Ġmo",
+        "m"
+      ],
+      [
+        "Ġ",
+        "ra"
+      ],
+      [
+        "end",
+        "o"
+      ],
+      [
+        "Ġd",
+        "u"
+      ],
+      [
+        "en",
+        "os"
+      ],
+      [
+        "Ġm",
+        "enos"
+      ],
+      [
+        "Ġs",
+        "uena"
+      ],
+      [
+        "ha",
+        "y"
+      ],
+      [
+        "Ġo",
+        "jos"
+      ],
+      [
+        "Ġnecesi",
+        "to"
+      ],
+      [
+        "Ġco",
+        "la"
+      ],
+      [
+        "Ã±",
+        "a"
+      ],
+      [
+        "e",
+        "que"
+      ],
+      [
+        "ue",
+        "go"
+      ],
+      [
+        "Ġa",
+        "n"
+      ],
+      [
+        "Ġesper",
+        "ando"
+      ],
+      [
+        "ch",
+        "et"
+      ],
+      [
+        "Ġca",
+        "chet"
+      ],
+      [
+        "Ġcachet",
+        "es"
+      ],
+      [
+        "e",
+        "la"
+      ],
+      [
+        "Ġgust",
+        "Ã³"
+      ],
+      [
+        "Ġs",
+        "u"
+      ],
+      [
+        "c",
+        "es"
+      ],
+      [
+        "en",
+        "s"
+      ],
+      [
+        "j",
+        "o"
+      ],
+      [
+        "y",
+        "o"
+      ],
+      [
+        "Ġcom",
+        "p"
+      ],
+      [
+        "a",
+        "di"
+      ],
+      [
+        "adi",
+        "Ã³s"
+      ],
+      [
+        "as",
+        "co"
+      ],
+      [
+        "asco",
+        "ta"
+      ],
+      [
+        "Ġe",
+        "x"
+      ],
+      [
+        "Ġfavor",
+        "ito"
+      ],
+      [
+        "m",
+        "p"
+      ],
+      [
+        "Ġe",
+        "mp"
+      ],
+      [
+        "ta",
+        "ba"
+      ],
+      [
+        "Ġnecesi",
+        "taba"
+      ],
+      [
+        "v",
+        "ÃŃa"
+      ],
+      [
+        "Ġp",
+        "es"
+      ],
+      [
+        "da",
+        "vÃŃa"
+      ],
+      [
+        "Ġto",
+        "davÃŃa"
+      ],
+      [
+        "Ã©",
+        "nta"
+      ],
+      [
+        "Ġl",
+        "i"
+      ],
+      [
+        "Ã©nta",
+        "me"
+      ],
+      [
+        "Ġl",
+        "uego"
+      ],
+      [
+        "Ġ",
+        "M"
+      ],
+      [
+        "Ġvuel",
+        "ta"
+      ],
+      [
+        "Ġna",
+        "da"
+      ],
+      [
+        "e",
+        "rt"
+      ],
+      [
+        "Ġsi",
+        "ent"
+      ],
+      [
+        "Ġmom",
+        "ento"
+      ],
+      [
+        "o",
+        "chi"
+      ],
+      [
+        "juga",
+        "mos"
+      ],
+      [
+        "e",
+        "x"
+      ],
+      [
+        "e",
+        "y"
+      ],
+      [
+        "h",
+        "ey"
+      ],
+      [
+        "m",
+        "a"
+      ],
+      [
+        "r",
+        "me"
+      ],
+      [
+        "Ġ",
+        "razÃ³n"
+      ],
+      [
+        "estu",
+        "vo"
+      ],
+      [
+        "Ġv",
+        "amos"
+      ],
+      [
+        "l",
+        "ima"
+      ],
+      [
+        "Ġc",
+        "lima"
+      ],
+      [
+        "Ġenc",
+        "ant"
+      ],
+      [
+        "er",
+        "p"
+      ],
+      [
+        "Ġcu",
+        "erp"
+      ],
+      [
+        "Ġcal",
+        "enta"
+      ],
+      [
+        "Ġl",
+        "as"
+      ],
+      [
+        "s",
+        "oy"
+      ],
+      [
+        "Ġm",
+        "ascota"
+      ],
+      [
+        "Ġpes",
+        "ado"
+      ],
+      [
+        "Ġc",
+        "h"
+      ],
+      [
+        "Ġ",
+        "jugar"
+      ],
+      [
+        "Ġn",
+        "ue"
+      ],
+      [
+        "Ġa",
+        "do"
+      ],
+      [
+        "Ġestu",
+        "vi"
+      ],
+      [
+        "Ġun",
+        "a"
+      ],
+      [
+        "Ġquier",
+        "as"
+      ],
+      [
+        "u",
+        "ra"
+      ],
+      [
+        "Ġc",
+        "re"
+      ],
+      [
+        "Ã±",
+        "ÃŃa"
+      ],
+      [
+        "Ġcom",
+        "pa"
+      ],
+      [
+        "Ġcompa",
+        "Ã±ÃŃa"
+      ],
+      [
+        "a",
+        "c"
+      ],
+      [
+        "Ġc",
+        "asi"
+      ],
+      [
+        "Ġpas",
+        "a"
+      ],
+      [
+        "Ġhac",
+        "e"
+      ],
+      [
+        "ĠsoÃ±",
+        "Ã©"
+      ],
+      [
+        "Ġes",
+        "e"
+      ],
+      [
+        "Ġcont",
+        "igo"
+      ],
+      [
+        "r",
+        "Ã¡"
+      ],
+      [
+        "Ġcuerp",
+        "ito"
+      ],
+      [
+        "Ġd",
+        "on"
+      ],
+      [
+        "r",
+        "ÃŃa"
+      ],
+      [
+        "Ġa",
+        "unque"
+      ],
+      [
+        "Ġvol",
+        "v"
+      ],
+      [
+        "Ġh",
+        "i"
+      ],
+      [
+        "ra",
+        "ndo"
+      ],
+      [
+        "Ġp",
+        "eque"
+      ],
+      [
+        "ab",
+        "razo"
+      ],
+      [
+        "Ġpro",
+        "ba"
+      ],
+      [
+        "blem",
+        "ente"
+      ],
+      [
+        "ĠM",
+        "ochi"
+      ],
+      [
+        "Ġproba",
+        "blemente"
+      ],
+      [
+        "al",
+        "le"
+      ],
+      [
+        "Ġg",
+        "alle"
+      ],
+      [
+        "Ġgalle",
+        "tas"
+      ],
+      [
+        "so",
+        "Ã±"
+      ],
+      [
+        "Ġdif",
+        "erente"
+      ],
+      [
+        "Ġm",
+        "an"
+      ],
+      [
+        "Ġfr",
+        "u"
+      ],
+      [
+        "e",
+        "vo"
+      ],
+      [
+        "l",
+        "u"
+      ],
+      [
+        "evo",
+        "lu"
+      ],
+      [
+        "evolu",
+        "cion"
+      ],
+      [
+        "Ġt",
+        "ienes"
+      ],
+      [
+        "a",
+        "y"
+      ],
+      [
+        "Ġse",
+        "gu"
+      ],
+      [
+        "Ġca",
+        "rita"
+      ],
+      [
+        "ens",
+        "ando"
+      ],
+      [
+        "Ġs",
+        "on"
+      ],
+      [
+        "do",
+        "r"
+      ],
+      [
+        "b",
+        "e"
+      ],
+      [
+        "Ġ",
+        "imp"
+      ],
+      [
+        "Ġca",
+        "be"
+      ],
+      [
+        "Ġcabe",
+        "za"
+      ],
+      [
+        "ri",
+        "z"
+      ],
+      [
+        "Ġna",
+        "riz"
+      ],
+      [
+        "d",
+        "ale"
+      ],
+      [
+        "Â",
+        "¡"
+      ],
+      [
+        "Ġdi",
+        "go"
+      ],
+      [
+        "i",
+        "das"
+      ],
+      [
+        "ÃŃ",
+        "date"
+      ],
+      [
+        "cu",
+        "ÃŃdate"
+      ],
+      [
+        "Ġli",
+        "sta"
+      ],
+      [
+        "Ġesp",
+        "ero"
+      ],
+      [
+        "eci",
+        "tos"
+      ],
+      [
+        "Ġpi",
+        "ecitos"
+      ],
+      [
+        "Ġde",
+        "l"
+      ],
+      [
+        "er",
+        "dad"
+      ],
+      [
+        "Ġv",
+        "erdad"
+      ],
+      [
+        "m",
+        "u"
+      ],
+      [
+        "mu",
+        "y"
+      ],
+      [
+        "Ġt",
+        "al"
+      ],
+      [
+        "ÃŃ",
+        "o"
+      ],
+      [
+        "Ġfr",
+        "ÃŃo"
+      ],
+      [
+        "Ġemo",
+        "ciÃ³n"
+      ],
+      [
+        "ra",
+        "ble"
+      ],
+      [
+        "Ġado",
+        "rable"
+      ],
+      [
+        "i",
+        "ento"
+      ],
+      [
+        "emp",
+        "ecemos"
+      ],
+      [
+        "Ġcuida",
+        "do"
+      ],
+      [
+        "i",
+        "ta"
+      ],
+      [
+        "a",
+        "h"
+      ],
+      [
+        "Ġp",
+        "on"
+      ],
+      [
+        "Ãº",
+        "n"
+      ],
+      [
+        "Ġcu",
+        "idas"
+      ],
+      [
+        "cu",
+        "er"
+      ],
+      [
+        "l",
+        "lega"
+      ],
+      [
+        "llega",
+        "ste"
+      ],
+      [
+        "d",
+        "os"
+      ],
+      [
+        "Ġg",
+        "an"
+      ],
+      [
+        "estu",
+        "ve"
+      ],
+      [
+        "me",
+        "jor"
+      ],
+      [
+        "Ġlista",
+        "s"
+      ],
+      [
+        "Ġs",
+        "ue"
+      ],
+      [
+        "l",
+        "or"
+      ],
+      [
+        "Ġc",
+        "er"
+      ],
+      [
+        "a",
+        "da"
+      ],
+      [
+        "Ġgu",
+        "ar"
+      ],
+      [
+        "Ġdesp",
+        "ert"
+      ],
+      [
+        "Ġd",
+        "as"
+      ],
+      [
+        "n",
+        "ecesi"
+      ],
+      [
+        "ÃŃ",
+        "ci"
+      ],
+      [
+        "Ġentiend",
+        "es"
+      ],
+      [
+        "Ġdif",
+        "ÃŃci"
+      ],
+      [
+        "ĠdifÃŃci",
+        "l"
+      ],
+      [
+        "f",
+        "ue"
+      ],
+      [
+        "Ġhuman",
+        "os"
+      ],
+      [
+        "m",
+        "al"
+      ],
+      [
+        "ten",
+        "go"
+      ],
+      [
+        "g",
+        "enial"
+      ],
+      [
+        "Ġvi",
+        "vo"
+      ],
+      [
+        "co",
+        "n"
+      ],
+      [
+        "r",
+        "os"
+      ],
+      [
+        "Ġnue",
+        "vo"
+      ],
+      [
+        "c",
+        "ado"
+      ],
+      [
+        "li",
+        "cado"
+      ],
+      [
+        "Ġcomp",
+        "licado"
+      ],
+      [
+        "Ġdes",
+        "c"
+      ],
+      [
+        "tra",
+        "Ã±"
+      ],
+      [
+        "u",
+        "da"
+      ],
+      [
+        "y",
+        "uda"
+      ],
+      [
+        "Ġa",
+        "yuda"
+      ],
+      [
+        "Ġest",
+        "o"
+      ],
+      [
+        "!",
+        "<|"
+      ],
+      [
+        "Ġ",
+        "w"
+      ],
+      [
+        "Ġp",
+        "rim"
+      ],
+      [
+        "Ġc",
+        "osa"
+      ],
+      [
+        "Ġra",
+        "to"
+      ],
+      [
+        "Ġi",
+        "nt"
+      ],
+      [
+        "Ã¡",
+        "l"
+      ],
+      [
+        "gu",
+        "emos"
+      ],
+      [
+        "ju",
+        "guemos"
+      ],
+      [
+        "Ġcuida",
+        "r"
+      ],
+      [
+        "c",
+        "os"
+      ],
+      [
+        "Ġa",
+        "gra"
+      ],
+      [
+        "Ġco",
+        "lor"
+      ],
+      [
+        "li",
+        "sta"
+      ],
+      [
+        "di",
+        "era"
+      ],
+      [
+        "Ġpu",
+        "diera"
+      ],
+      [
+        "Ġb",
+        "a"
+      ],
+      [
+        "or",
+        "i"
+      ],
+      [
+        "Ġ",
+        "ho"
+      ],
+      [
+        "Ġencant",
+        "Ã³"
+      ],
+      [
+        "rim",
+        "iento"
+      ],
+      [
+        "si",
+        "ca"
+      ],
+      [
+        "Ġm",
+        "Ãº"
+      ],
+      [
+        "ĠmÃº",
+        "sica"
+      ],
+      [
+        "j",
+        "e"
+      ],
+      [
+        "Ġtra",
+        "je"
+      ],
+      [
+        "Ġp",
+        "re"
+      ],
+      [
+        "Ġesta",
+        "ba"
+      ],
+      [
+        "Ġd",
+        "ale"
+      ],
+      [
+        "r",
+        "as"
+      ],
+      [
+        "er",
+        "n"
+      ],
+      [
+        "Ġc",
+        "ans"
+      ],
+      [
+        "ero",
+        "n"
+      ],
+      [
+        "co",
+        "nt"
+      ],
+      [
+        "Ġpro",
+        "nto"
+      ],
+      [
+        "Ġque",
+        "da"
+      ],
+      [
+        "Ġestu",
+        "ve"
+      ],
+      [
+        "l",
+        "l"
+      ],
+      [
+        "soÃ±",
+        "aste"
+      ],
+      [
+        "Ġsient",
+        "es"
+      ],
+      [
+        "Ġgan",
+        "o"
+      ],
+      [
+        "rt",
+        "ido"
+      ],
+      [
+        "ve",
+        "rtido"
+      ],
+      [
+        "Ġdi",
+        "vertido"
+      ],
+      [
+        "Ġa",
+        "ten"
+      ],
+      [
+        "Ġaten",
+        "ciÃ³n"
+      ],
+      [
+        "cu",
+        "Ã©ntame"
+      ],
+      [
+        "Ġemo",
+        "cion"
+      ],
+      [
+        "p",
+        "erfec"
+      ],
+      [
+        "Ġcon",
+        "fi"
+      ],
+      [
+        "Ġconfi",
+        "r"
+      ],
+      [
+        "Ġ",
+        "hoy"
+      ],
+      [
+        "ela",
+        "do"
+      ],
+      [
+        "i",
+        "era"
+      ],
+      [
+        "Ġh",
+        "ub"
+      ],
+      [
+        "sub",
+        "iste"
+      ],
+      [
+        "Ġhub",
+        "iera"
+      ],
+      [
+        "z",
+        "an"
+      ],
+      [
+        "Ġsi",
+        "ente"
+      ],
+      [
+        "cre",
+        "ciste"
+      ],
+      [
+        "c",
+        "er"
+      ],
+      [
+        "Ġcre",
+        "cer"
+      ],
+      [
+        "en",
+        "a"
+      ],
+      [
+        "u",
+        "al"
+      ],
+      [
+        "rt",
+        "ual"
+      ],
+      [
+        "Ġdu",
+        "l"
+      ],
+      [
+        "Ġentiend",
+        "o"
+      ],
+      [
+        "Ã¡",
+        "ndo"
+      ],
+      [
+        "evolucion",
+        "aste"
+      ],
+      [
+        "l",
+        "le"
+      ],
+      [
+        "Ġpor",
+        "que"
+      ],
+      [
+        "Ġcer",
+        "e"
+      ],
+      [
+        "Ġha",
+        "b"
+      ],
+      [
+        "Ġsu",
+        "s"
+      ],
+      [
+        "Ġcalenta",
+        "ron"
+      ],
+      [
+        "z",
+        "co"
+      ],
+      [
+        "Ġvolv",
+        "ÃŃ"
+      ],
+      [
+        "m",
+        "ÃŃ"
+      ],
+      [
+        "al",
+        "o"
+      ],
+      [
+        "Ġvi",
+        "b"
+      ],
+      [
+        "cont",
+        "igo"
+      ],
+      [
+        "o",
+        "rt"
+      ],
+      [
+        "Ġpeque",
+        "Ã±a"
+      ],
+      [
+        "Ġa",
+        "man"
+      ],
+      [
+        "Ġf",
+        "un"
+      ],
+      [
+        "Ġfun",
+        "cion"
+      ],
+      [
+        "st",
+        "o"
+      ],
+      [
+        "Ġta",
+        "r"
+      ],
+      [
+        "Ġprim",
+        "ero"
+      ],
+      [
+        "al",
+        "mente"
+      ],
+      [
+        "Ġb",
+        "o"
+      ],
+      [
+        "ĠquÃ©",
+        "date"
+      ],
+      [
+        "Ġami",
+        "go"
+      ],
+      [
+        "st",
+        "os"
+      ],
+      [
+        "Ġque",
+        "do"
+      ],
+      [
+        "ue",
+        "stos"
+      ],
+      [
+        "Ġve",
+        "rte"
+      ],
+      [
+        "v",
+        "uel"
+      ],
+      [
+        "Ġde",
+        "vuel"
+      ],
+      [
+        "Ġab",
+        "raz"
+      ],
+      [
+        "Ġabraz",
+        "os"
+      ],
+      [
+        "Ġt",
+        "rÃ¡"
+      ],
+      [
+        "al",
+        "qui"
+      ],
+      [
+        "alqui",
+        "er"
+      ],
+      [
+        "Ġ",
+        "r"
+      ],
+      [
+        "Ġb",
+        "on"
+      ],
+      [
+        "Ġemp",
+        "ecemos"
+      ],
+      [
+        "e",
+        "ta"
+      ],
+      [
+        "Ġser",
+        "ÃŃa"
+      ],
+      [
+        "Ġa",
+        "ma"
+      ],
+      [
+        "Ġama",
+        "ble"
+      ],
+      [
+        "ent",
+        "as"
+      ],
+      [
+        "Ġcont",
+        "entas"
+      ],
+      [
+        "u",
+        "Ã©s"
+      ],
+      [
+        "Ġdesp",
+        "uÃ©s"
+      ],
+      [
+        "enti",
+        "tas"
+      ],
+      [
+        "Ġcal",
+        "entitas"
+      ],
+      [
+        "a",
+        "mi"
+      ],
+      [
+        "ami",
+        "gos"
+      ],
+      [
+        "d",
+        "eci"
+      ],
+      [
+        "i",
+        "nt"
+      ],
+      [
+        "Ġpas",
+        "Ã³"
+      ],
+      [
+        "Ġvib",
+        "rando"
+      ],
+      [
+        "Ġ",
+        "era"
+      ],
+      [
+        "st",
+        "es"
+      ],
+      [
+        "sub",
+        "ÃŃ"
+      ],
+      [
+        "l",
+        "es"
+      ],
+      [
+        "Ġ",
+        "ro"
+      ],
+      [
+        "Ġ",
+        "ent"
+      ],
+      [
+        "Ġor",
+        "den"
+      ],
+      [
+        "Ġfuncion",
+        "a"
+      ],
+      [
+        "pa",
+        "re"
+      ],
+      [
+        "cuer",
+        "do"
+      ],
+      [
+        "c",
+        "ÃŃ"
+      ],
+      [
+        "cre",
+        "cÃŃ"
+      ],
+      [
+        "Ġso",
+        "la"
+      ],
+      [
+        "Ġc",
+        "Ã³mo"
+      ],
+      [
+        "ĠcÃ³mo",
+        "da"
+      ],
+      [
+        "Ġhuman",
+        "o"
+      ],
+      [
+        "z",
+        "o"
+      ],
+      [
+        "e",
+        "sta"
+      ],
+      [
+        "Ġl",
+        "lo"
+      ],
+      [
+        "est",
+        "Ã¡"
+      ],
+      [
+        "vi",
+        "endo"
+      ],
+      [
+        "Ġllo",
+        "viendo"
+      ],
+      [
+        "Ġperfec",
+        "ta"
+      ],
+      [
+        "r",
+        "ÃŃ"
+      ],
+      [
+        "Ġp",
+        "ensando"
+      ],
+      [
+        "perfec",
+        "to"
+      ],
+      [
+        "Ġabur",
+        "rimiento"
+      ],
+      [
+        "Ġdespert",
+        "Ã©"
+      ],
+      [
+        "em",
+        "Ã¡s"
+      ],
+      [
+        "Ġad",
+        "emÃ¡s"
+      ],
+      [
+        "ex",
+        "ac"
+      ],
+      [
+        "exac",
+        "to"
+      ],
+      [
+        "Ġpa",
+        "ro"
+      ],
+      [
+        "Ġti",
+        "rita"
+      ],
+      [
+        "Ġtirita",
+        "r"
+      ],
+      [
+        "ga",
+        "r"
+      ],
+      [
+        "Ġlin",
+        "da"
+      ],
+      [
+        "c",
+        "en"
+      ],
+      [
+        "Ġdi",
+        "cen"
+      ],
+      [
+        "e",
+        "gu"
+      ],
+      [
+        "in",
+        "a"
+      ],
+      [
+        "Ġas",
+        "egu"
+      ],
+      [
+        "Ġasegu",
+        "ro"
+      ],
+      [
+        "ci",
+        "dad"
+      ],
+      [
+        "j",
+        "al"
+      ],
+      [
+        "o",
+        "jal"
+      ],
+      [
+        "ojal",
+        "Ã¡"
+      ],
+      [
+        "Ġcu",
+        "ento"
+      ],
+      [
+        "al",
+        "ta"
+      ],
+      [
+        "Ġf",
+        "alta"
+      ],
+      [
+        "Ġestuvi",
+        "ste"
+      ],
+      [
+        "si",
+        "n"
+      ],
+      [
+        "Ġllega",
+        "do"
+      ],
+      [
+        "Ġsue",
+        "Ã±o"
+      ],
+      [
+        "do",
+        "n"
+      ],
+      [
+        "Ġre",
+        "don"
+      ],
+      [
+        "gu",
+        "ll"
+      ],
+      [
+        "Ġor",
+        "gull"
+      ],
+      [
+        "Ġorgull",
+        "osa"
+      ],
+      [
+        "mi",
+        "ste"
+      ],
+      [
+        "Ġestuvi",
+        "eron"
+      ],
+      [
+        "dor",
+        "miste"
+      ],
+      [
+        "t",
+        "an"
+      ],
+      [
+        "Ġno",
+        "tan"
+      ],
+      [
+        "gu",
+        "Ã©"
+      ],
+      [
+        "Ġentiend",
+        "a"
+      ],
+      [
+        "lle",
+        "guÃ©"
+      ],
+      [
+        "no",
+        "tas"
+      ],
+      [
+        "m",
+        "asi"
+      ],
+      [
+        "Ġde",
+        "masi"
+      ],
+      [
+        "Ġfe",
+        "o"
+      ],
+      [
+        "Ġdemasi",
+        "ado"
+      ],
+      [
+        "Ġl",
+        "l"
+      ],
+      [
+        "i",
+        "de"
+      ],
+      [
+        "r",
+        "ro"
+      ],
+      [
+        "Ġa",
+        "rro"
+      ],
+      [
+        "Ġf",
+        "ide"
+      ],
+      [
+        "li",
+        "tas"
+      ],
+      [
+        "Ġbo",
+        "litas"
+      ],
+      [
+        "Ġarro",
+        "z"
+      ],
+      [
+        "Ġfide",
+        "os"
+      ],
+      [
+        "Ġtri",
+        "stes"
+      ],
+      [
+        "Ġmu",
+        "ndo"
+      ],
+      [
+        "co",
+        "me"
+      ],
+      [
+        "ana",
+        "das"
+      ],
+      [
+        "Ġemp",
+        "anadas"
+      ],
+      [
+        "Ġsegu",
+        "ra"
+      ],
+      [
+        "Ġhi",
+        "zo"
+      ],
+      [
+        "Ġs",
+        "oy"
+      ],
+      [
+        "Ġmejor",
+        "es"
+      ],
+      [
+        "ÃŃ",
+        "ble"
+      ],
+      [
+        "cre",
+        "ÃŃble"
+      ],
+      [
+        "Ġin",
+        "creÃŃble"
+      ],
+      [
+        "Ġan",
+        "das"
+      ],
+      [
+        "a",
+        "ho"
+      ],
+      [
+        "ga",
+        "ste"
+      ],
+      [
+        "Ġdes",
+        "aho"
+      ],
+      [
+        "pa",
+        "ra"
+      ],
+      [
+        "Ġdesaho",
+        "gaste"
+      ],
+      [
+        "t",
+        "ri"
+      ],
+      [
+        "Ġdon",
+        "as"
+      ],
+      [
+        "tri",
+        "ste"
+      ],
+      [
+        "eci",
+        "ste"
+      ],
+      [
+        "Ġimp",
+        "ort"
+      ],
+      [
+        "Ġaman",
+        "eciste"
+      ],
+      [
+        "u",
+        "gar"
+      ],
+      [
+        "Ġl",
+        "ugar"
+      ],
+      [
+        "Ġguar",
+        "do"
+      ],
+      [
+        "Ġc",
+        "ho"
+      ],
+      [
+        "la",
+        "te"
+      ],
+      [
+        "co",
+        "late"
+      ],
+      [
+        "Ġcho",
+        "colate"
+      ],
+      [
+        "Ġco",
+        "me"
+      ],
+      [
+        "t",
+        "Ãº"
+      ],
+      [
+        "t",
+        "ina"
+      ],
+      [
+        "Ġta",
+        "mal"
+      ],
+      [
+        "Ġg",
+        "ela"
+      ],
+      [
+        "Ġtamal",
+        "es"
+      ],
+      [
+        "Ġgela",
+        "tina"
+      ],
+      [
+        "Ġestu",
+        "vo"
+      ],
+      [
+        "Ġman",
+        "zan"
+      ],
+      [
+        "Ġmanzan",
+        "as"
+      ],
+      [
+        "Ġdul",
+        "ces"
+      ],
+      [
+        "Ġfru",
+        "tos"
+      ],
+      [
+        "Ġro",
+        "jos"
+      ],
+      [
+        "Ġp",
+        "alo"
+      ],
+      [
+        "mi",
+        "tas"
+      ],
+      [
+        "Ġpalo",
+        "mitas"
+      ],
+      [
+        "Ã¡ndo",
+        "te"
+      ],
+      [
+        "Ġmu",
+        "ero"
+      ],
+      [
+        "Ġman",
+        "era"
+      ],
+      [
+        "Ġhi",
+        "ciste"
+      ],
+      [
+        "Ġfru",
+        "ta"
+      ],
+      [
+        "Ġcere",
+        "al"
+      ],
+      [
+        "k",
+        "es"
+      ],
+      [
+        "Ġca",
+        "kes"
+      ],
+      [
+        "Ġho",
+        "t"
+      ],
+      [
+        "Ġta",
+        "cos"
+      ],
+      [
+        "Ġh",
+        "elado"
+      ],
+      [
+        "Ġ",
+        "hora"
+      ],
+      [
+        "ur",
+        "ros"
+      ],
+      [
+        "Ġch",
+        "urros"
+      ],
+      [
+        "h",
+        "ori"
+      ],
+      [
+        "z",
+        "ana"
+      ],
+      [
+        "Ġ",
+        "zana"
+      ],
+      [
+        "hori",
+        "as"
+      ],
+      [
+        "Ġzana",
+        "horias"
+      ],
+      [
+        "a",
+        "w"
+      ],
+      [
+        "sta",
+        "do"
+      ],
+      [
+        "Ġto",
+        "stado"
+      ],
+      [
+        "Ġdesc",
+        "ans"
+      ],
+      [
+        "z",
+        "za"
+      ],
+      [
+        "Ġpi",
+        "zza"
+      ],
+      [
+        "Ġqu",
+        "er"
+      ],
+      [
+        "a",
+        "f"
+      ],
+      [
+        "f",
+        "les"
+      ],
+      [
+        "i",
+        "s"
+      ],
+      [
+        "s",
+        "ant"
+      ],
+      [
+        "er",
+        "mo"
+      ],
+      [
+        "Ġc",
+        "ro"
+      ],
+      [
+        "Ġdu",
+        "ermo"
+      ],
+      [
+        "Ġw",
+        "af"
+      ],
+      [
+        "is",
+        "sant"
+      ],
+      [
+        "Ġcro",
+        "issant"
+      ],
+      [
+        "Ġwaf",
+        "fles"
+      ],
+      [
+        "Ġcroissant",
+        "s"
+      ],
+      [
+        "h",
+        "i"
+      ],
+      [
+        "Ġsus",
+        "hi"
+      ],
+      [
+        "d",
+        "w"
+      ],
+      [
+        "i",
+        "ches"
+      ],
+      [
+        "n",
+        "dw"
+      ],
+      [
+        "Ġs",
+        "Ã¡"
+      ],
+      [
+        "Ġagra",
+        "deci"
+      ],
+      [
+        "ndw",
+        "iches"
+      ],
+      [
+        "ĠsÃ¡",
+        "ndwiches"
+      ],
+      [
+        "Ġagradeci",
+        "das"
+      ],
+      [
+        "d",
+        "ÃŃ"
+      ],
+      [
+        "Ġpu",
+        "dÃŃ"
+      ],
+      [
+        "ĠpudÃŃ",
+        "n"
+      ],
+      [
+        "Ġo",
+        "l"
+      ],
+      [
+        "Ġvi",
+        "rtual"
+      ],
+      [
+        "ste",
+        "l"
+      ],
+      [
+        "Ġpa",
+        "stel"
+      ],
+      [
+        "p",
+        "i"
+      ],
+      [
+        "Ġc",
+        "os"
+      ],
+      [
+        "Ġd",
+        "os"
+      ],
+      [
+        "Ġten",
+        "ÃŃa"
+      ],
+      [
+        "Ġcos",
+        "as"
+      ],
+      [
+        "ti",
+        "c"
+      ],
+      [
+        "p",
+        "as"
+      ],
+      [
+        "Ġf",
+        "ri"
+      ],
+      [
+        "Ġpa",
+        "pas"
+      ],
+      [
+        "Ġfri",
+        "tas"
+      ],
+      [
+        "Ġllega",
+        "ste"
+      ],
+      [
+        "la",
+        "r"
+      ],
+      [
+        "vi",
+        "ste"
+      ],
+      [
+        "Ġvol",
+        "viste"
+      ],
+      [
+        "Ġde",
+        "ci"
+      ],
+      [
+        "f",
+        "in"
+      ],
+      [
+        "Ġint",
+        "eres"
+      ],
+      [
+        "cu",
+        "Ã¡l"
+      ],
+      [
+        "g",
+        "s"
+      ],
+      [
+        "h",
+        "u"
+      ],
+      [
+        "hu",
+        "gs"
+      ],
+      [
+        "ÃŃ",
+        "mi"
+      ],
+      [
+        "Ġcu",
+        "Ã©ntame"
+      ],
+      [
+        "Ġpue",
+        "des"
+      ],
+      [
+        "im",
+        "o"
+      ],
+      [
+        "g",
+        "Ãºn"
+      ],
+      [
+        "i",
+        "co"
+      ],
+      [
+        "Ġ",
+        "Ãºn"
+      ],
+      [
+        "ĠÃºn",
+        "ico"
+      ],
+      [
+        "Ġsal",
+        "ta"
+      ],
+      [
+        "Ġta",
+        "nto"
+      ],
+      [
+        "im",
+        "os"
+      ],
+      [
+        "f",
+        "erente"
+      ],
+      [
+        "st",
+        "int"
+      ],
+      [
+        "si",
+        "ble"
+      ],
+      [
+        "Ġdi",
+        "stint"
+      ],
+      [
+        "di",
+        "ferente"
+      ],
+      [
+        "Ġsient",
+        "en"
+      ],
+      [
+        "Ġdistint",
+        "as"
+      ],
+      [
+        "necesi",
+        "tas"
+      ],
+      [
+        "Ġemocion",
+        "almente"
+      ],
+      [
+        "p",
+        "oy"
+      ],
+      [
+        "Ġa",
+        "poy"
+      ],
+      [
+        "Ġapoy",
+        "o"
+      ],
+      [
+        "mi",
+        "go"
+      ],
+      [
+        "Ġcon",
+        "migo"
+      ],
+      [
+        "ga",
+        "te"
+      ],
+      [
+        "ab",
+        "rÃŃ"
+      ],
+      [
+        "abrÃŃ",
+        "gate"
+      ],
+      [
+        "p",
+        "res"
+      ],
+      [
+        "s",
+        "uena"
+      ],
+      [
+        "Ġse",
+        "pa"
+      ],
+      [
+        "Ġcalenta",
+        "rte"
+      ],
+      [
+        "Ġa",
+        "gu"
+      ],
+      [
+        "Ġt",
+        "ern"
+      ],
+      [
+        "Ġta",
+        "nta"
+      ],
+      [
+        "Ġbuen",
+        "a"
+      ],
+      [
+        "ant",
+        "an"
+      ],
+      [
+        "Ġagu",
+        "antan"
+      ],
+      [
+        "Ġtern",
+        "ura"
+      ],
+      [
+        "u",
+        "i"
+      ],
+      [
+        "dor",
+        "mÃŃ"
+      ],
+      [
+        "Ġm",
+        "al"
+      ],
+      [
+        "o",
+        "cu"
+      ],
+      [
+        "ima",
+        "ron"
+      ],
+      [
+        "Ġan",
+        "imaron"
+      ],
+      [
+        "Ġpre",
+        "ocu"
+      ],
+      [
+        "Ġpreocu",
+        "pa"
+      ],
+      [
+        "Ġcans",
+        "ada"
+      ],
+      [
+        "cÃ³mo",
+        "do"
+      ],
+      [
+        "Ġin",
+        "cÃ³modo"
+      ],
+      [
+        "Ġfeliz",
+        "mente"
+      ],
+      [
+        "cre",
+        "o"
+      ],
+      [
+        "Ġa",
+        "cuerdo"
+      ],
+      [
+        "Ġdescans",
+        "es"
+      ],
+      [
+        "Ġgust",
+        "o"
+      ],
+      [
+        "Ġquier",
+        "en"
+      ],
+      [
+        "m",
+        "enta"
+      ],
+      [
+        "Ġt",
+        "or"
+      ],
+      [
+        "Ġtor",
+        "menta"
+      ],
+      [
+        "v",
+        "ent"
+      ],
+      [
+        "g",
+        "i"
+      ],
+      [
+        "i",
+        "on"
+      ],
+      [
+        "ion",
+        "es"
+      ],
+      [
+        "e",
+        "rte"
+      ],
+      [
+        "Ġten",
+        "erte"
+      ],
+      [
+        "Ġque",
+        "das"
+      ],
+      [
+        "Ġex",
+        "traÃ±"
+      ],
+      [
+        "Ġdevuel",
+        "vo"
+      ],
+      [
+        "Ġd",
+        "a"
+      ],
+      [
+        "Ġpro",
+        "pi"
+      ],
+      [
+        "entiend",
+        "o"
+      ],
+      [
+        "Ġqueda",
+        "rte"
+      ],
+      [
+        "Ġpropi",
+        "os"
+      ],
+      [
+        "on",
+        "ces"
+      ],
+      [
+        "Ġent",
+        "onces"
+      ],
+      [
+        "Ġquer",
+        "ida"
+      ],
+      [
+        "Ġfue",
+        "rte"
+      ],
+      [
+        "cu",
+        "alquier"
+      ],
+      [
+        "ex",
+        "traÃ±"
+      ],
+      [
+        "extraÃ±",
+        "Ã¡ndote"
+      ],
+      [
+        "Ġt",
+        "an"
+      ],
+      [
+        "Ġpas",
+        "ar"
+      ],
+      [
+        "Ġfeli",
+        "cidad"
+      ],
+      [
+        "necesi",
+        "to"
+      ],
+      [
+        "Ġhab",
+        "lar"
+      ],
+      [
+        "Ġdeci",
+        "rme"
+      ],
+      [
+        "m",
+        "pa"
+      ],
+      [
+        "si",
+        "go"
+      ],
+      [
+        "Ġa",
+        "co"
+      ],
+      [
+        "mpa",
+        "Ã±o"
+      ],
+      [
+        "Ġaco",
+        "mpaÃ±o"
+      ],
+      [
+        "i",
+        "Ã³"
+      ],
+      [
+        "p",
+        "to"
+      ],
+      [
+        "Ġa",
+        "ce"
+      ],
+      [
+        "Ġace",
+        "pto"
+      ],
+      [
+        "i",
+        "tos"
+      ],
+      [
+        "Ġl",
+        "la"
+      ],
+      [
+        "Ġin",
+        "fin"
+      ],
+      [
+        "Ġbon",
+        "ita"
+      ],
+      [
+        "ĠtenÃŃa",
+        "mos"
+      ],
+      [
+        "Ġinfin",
+        "itos"
+      ],
+      [
+        "i",
+        "jo"
+      ],
+      [
+        "Ġel",
+        "ijo"
+      ],
+      [
+        "j",
+        "iste"
+      ],
+      [
+        "tra",
+        "jiste"
+      ],
+      [
+        "Ġn",
+        "in"
+      ],
+      [
+        "Ġla",
+        "do"
+      ],
+      [
+        "Ġnin",
+        "gÃºn"
+      ],
+      [
+        "Ġa",
+        "pare"
+      ],
+      [
+        "Ġapare",
+        "ciste"
+      ],
+      [
+        "Ġch",
+        "i"
+      ],
+      [
+        "p",
+        "ensando"
+      ],
+      [
+        "Ġami",
+        "ga"
+      ],
+      [
+        "p",
+        "or"
+      ],
+      [
+        "Ġha",
+        "y"
+      ],
+      [
+        "v",
+        "aste"
+      ],
+      [
+        "Ġsal",
+        "vaste"
+      ],
+      [
+        "Ġp",
+        "ien"
+      ],
+      [
+        "Ġsi",
+        "gu"
+      ],
+      [
+        "li",
+        "sto"
+      ],
+      [
+        "Ġpon",
+        "er"
+      ],
+      [
+        "Ġsigu",
+        "es"
+      ],
+      [
+        "a",
+        "fuera"
+      ],
+      [
+        "o",
+        "zco"
+      ],
+      [
+        "Ġcon",
+        "ozco"
+      ],
+      [
+        "Ġll",
+        "ena"
+      ],
+      [
+        "l",
+        "as"
+      ],
+      [
+        "Ġ",
+        "ju"
+      ],
+      [
+        "Ġfavor",
+        "ita"
+      ],
+      [
+        "Ġvuel",
+        "ve"
+      ],
+      [
+        "Ġconfir",
+        "man"
+      ],
+      [
+        "Ġgu",
+        "sta"
+      ],
+      [
+        "Ġba",
+        "j"
+      ],
+      [
+        "esta",
+        "ba"
+      ],
+      [
+        "ci",
+        "b"
+      ],
+      [
+        "Ġre",
+        "cib"
+      ],
+      [
+        "nt",
+        "es"
+      ],
+      [
+        "Ġa",
+        "ntes"
+      ],
+      [
+        "Ġencant",
+        "a"
+      ],
+      [
+        "j",
+        "an"
+      ],
+      [
+        "n",
+        "de"
+      ],
+      [
+        "Ġ",
+        "gra"
+      ],
+      [
+        "Ġpo",
+        "sible"
+      ],
+      [
+        "Ġgra",
+        "nde"
+      ],
+      [
+        "Ġimport",
+        "ante"
+      ],
+      [
+        "un",
+        "iones"
+      ],
+      [
+        "c",
+        "eso"
+      ],
+      [
+        "Ġpro",
+        "ceso"
+      ],
+      [
+        "an",
+        "co"
+      ],
+      [
+        "Ġb",
+        "anco"
+      ],
+      [
+        "Ġa",
+        "fec"
+      ],
+      [
+        "Ġafec",
+        "ta"
+      ],
+      [
+        "Ġsi",
+        "n"
+      ],
+      [
+        "Ġm",
+        "ue"
+      ],
+      [
+        "Ġvolv",
+        "emos"
+      ],
+      [
+        "Ġcont",
+        "enta"
+      ],
+      [
+        "vent",
+        "ura"
+      ],
+      [
+        "Ġdi",
+        "rÃŃa"
+      ],
+      [
+        "ab",
+        "ur"
+      ],
+      [
+        "la",
+        "tic"
+      ],
+      [
+        "x",
+        "el"
+      ],
+      [
+        "Ġp",
+        "ÃŃ"
+      ],
+      [
+        "xel",
+        "es"
+      ],
+      [
+        "ĠpÃŃ",
+        "xeles"
+      ],
+      [
+        "m",
+        "ado"
+      ],
+      [
+        "Ġo",
+        "tra"
+      ],
+      [
+        "Ġconfir",
+        "mado"
+      ],
+      [
+        "Ġpeque",
+        "Ã±o"
+      ],
+      [
+        "g",
+        "ida"
+      ],
+      [
+        "t",
+        "es"
+      ],
+      [
+        "mi",
+        "tes"
+      ],
+      [
+        "te",
+        "gida"
+      ],
+      [
+        "Ġpro",
+        "tegida"
+      ],
+      [
+        "ĠtrÃ¡",
+        "mites"
+      ],
+      [
+        "an",
+        "so"
+      ],
+      [
+        "Ġpi",
+        "den"
+      ],
+      [
+        "Ġdesc",
+        "anso"
+      ],
+      [
+        "Ġpre",
+        "gu"
+      ],
+      [
+        "Ġc",
+        "Ã¡l"
+      ],
+      [
+        "cu",
+        "lo"
+      ],
+      [
+        "ado",
+        "res"
+      ],
+      [
+        "Ġso",
+        "las"
+      ],
+      [
+        "ĠcÃ¡l",
+        "culo"
+      ],
+      [
+        "emp",
+        "o"
+      ],
+      [
+        "Ġti",
+        "empo"
+      ],
+      [
+        "c",
+        "t"
+      ],
+      [
+        "ur",
+        "as"
+      ],
+      [
+        "Ġfa",
+        "ct"
+      ],
+      [
+        "Ġfact",
+        "uras"
+      ],
+      [
+        "e",
+        "Ã±"
+      ],
+      [
+        "i",
+        "fi"
+      ],
+      [
+        "Ġp",
+        "ena"
+      ],
+      [
+        "al",
+        "iÃ³"
+      ],
+      [
+        "Ġv",
+        "aliÃ³"
+      ],
+      [
+        "Ġw",
+        "ifi"
+      ],
+      [
+        "ras",
+        "eÃ±"
+      ],
+      [
+        "Ġcans",
+        "Ã©"
+      ],
+      [
+        "raseÃ±",
+        "as"
+      ],
+      [
+        "b",
+        "ien"
+      ],
+      [
+        "Ġdi",
+        "eta"
+      ],
+      [
+        "ern",
+        "et"
+      ],
+      [
+        "p",
+        "uestos"
+      ],
+      [
+        "u",
+        "puestos"
+      ],
+      [
+        "or",
+        "mal"
+      ],
+      [
+        "Ġn",
+        "ormal"
+      ],
+      [
+        "fi",
+        "co"
+      ],
+      [
+        "ĠtrÃ¡",
+        "fico"
+      ],
+      [
+        "stant",
+        "e"
+      ],
+      [
+        "Ġf",
+        "in"
+      ],
+      [
+        "Ġv",
+        "ec"
+      ],
+      [
+        "qui",
+        "ero"
+      ],
+      [
+        "Ġvec",
+        "es"
+      ],
+      [
+        "b",
+        "y"
+      ],
+      [
+        "by",
+        "e"
+      ],
+      [
+        "p",
+        "et"
+      ],
+      [
+        "Ġre",
+        "pet"
+      ],
+      [
+        "Ġrepet",
+        "imos"
+      ],
+      [
+        "a",
+        "unque"
+      ],
+      [
+        "de",
+        "zco"
+      ],
+      [
+        "Ġagra",
+        "dezco"
+      ],
+      [
+        "da",
+        "ste"
+      ],
+      [
+        "Ġpon",
+        "go"
+      ],
+      [
+        "n",
+        "ivel"
+      ],
+      [
+        "o",
+        "que"
+      ],
+      [
+        "Ġdes",
+        "bl"
+      ],
+      [
+        "Ġre",
+        "uniones"
+      ],
+      [
+        "oque",
+        "ado"
+      ],
+      [
+        "Ġdesbl",
+        "oqueado"
+      ],
+      [
+        "n",
+        "asi"
+      ],
+      [
+        "im",
+        "nasi"
+      ],
+      [
+        "Ġg",
+        "imnasi"
+      ],
+      [
+        "Ġgimnasi",
+        "o"
+      ],
+      [
+        "Ġme",
+        "jo"
+      ],
+      [
+        "Ġmejo",
+        "ra"
+      ],
+      [
+        "f",
+        "er"
+      ],
+      [
+        "re",
+        "as"
+      ],
+      [
+        "fer",
+        "ma"
+      ],
+      [
+        "ÃŃ",
+        "ti"
+      ],
+      [
+        "Ġale",
+        "g"
+      ],
+      [
+        "ÃŃti",
+        "ca"
+      ],
+      [
+        "ci",
+        "a"
+      ],
+      [
+        "Ġre",
+        "cuer"
+      ],
+      [
+        "Ġcre",
+        "o"
+      ],
+      [
+        "evolucion",
+        "e"
+      ],
+      [
+        "la",
+        "jan"
+      ],
+      [
+        "Ġdi",
+        "ces"
+      ],
+      [
+        "Ġre",
+        "lajan"
+      ],
+      [
+        "i",
+        "ent"
+      ],
+      [
+        "ida",
+        "d"
+      ],
+      [
+        "ar",
+        "ÃŃa"
+      ],
+      [
+        "cu",
+        "ida"
+      ],
+      [
+        "Ġpi",
+        "do"
+      ],
+      [
+        "cuida",
+        "da"
+      ],
+      [
+        "d",
+        "rÃŃa"
+      ],
+      [
+        "Ġredon",
+        "dos"
+      ],
+      [
+        "ha",
+        "mbre"
+      ],
+      [
+        "Ġimp",
+        "uestos"
+      ],
+      [
+        "Ġcuida",
+        "rme"
+      ],
+      [
+        "ci",
+        "al"
+      ],
+      [
+        "Ġso",
+        "cial"
+      ],
+      [
+        "Ġsocial",
+        "es"
+      ],
+      [
+        "ba",
+        "jo"
+      ],
+      [
+        "Ġtra",
+        "bajo"
+      ],
+      [
+        "Ġs",
+        "imp"
+      ],
+      [
+        "Ġra",
+        "ra"
+      ],
+      [
+        "Ġmue",
+        "ve"
+      ],
+      [
+        "ri",
+        "Ã±o"
+      ],
+      [
+        "Ġca",
+        "riÃ±o"
+      ],
+      [
+        "s",
+        "ado"
+      ],
+      [
+        "Ġa",
+        "vi"
+      ],
+      [
+        "un",
+        "o"
+      ],
+      [
+        "Ġdes",
+        "ay"
+      ],
+      [
+        "soÃ±",
+        "Ã©"
+      ],
+      [
+        "Ġavi",
+        "sado"
+      ],
+      [
+        "Ġdesay",
+        "uno"
+      ],
+      [
+        "e",
+        "tas"
+      ],
+      [
+        "r",
+        "se"
+      ],
+      [
+        "Ġqui",
+        "etas"
+      ],
+      [
+        "Ġpue",
+        "den"
+      ],
+      [
+        "Ġqueda",
+        "rse"
+      ],
+      [
+        "Ġp",
+        "res"
+      ],
+      [
+        "ÃŃ",
+        "das"
+      ],
+      [
+        "Ġha",
+        "sta"
+      ],
+      [
+        "Ġca",
+        "ÃŃdas"
+      ],
+      [
+        "Ġho",
+        "jas"
+      ],
+      [
+        "Ġtar",
+        "de"
+      ],
+      [
+        "Ġpres",
+        "upuestos"
+      ],
+      [
+        "Ġm",
+        "imo"
+      ],
+      [
+        "Ġcont",
+        "raseÃ±as"
+      ],
+      [
+        "Ġdespert",
+        "adores"
+      ],
+      [
+        "Ġbaj",
+        "a"
+      ],
+      [
+        "Ġt",
+        "emp"
+      ],
+      [
+        "ra",
+        "no"
+      ],
+      [
+        "era",
+        "ba"
+      ],
+      [
+        "Ġesp",
+        "eraba"
+      ],
+      [
+        "Ġdor",
+        "mÃŃ"
+      ],
+      [
+        "Ġtemp",
+        "rano"
+      ],
+      [
+        "p",
+        "ido"
+      ],
+      [
+        "Ġ",
+        "rÃ¡"
+      ],
+      [
+        "Ġs",
+        "ab"
+      ],
+      [
+        "Ġco",
+        "razÃ³n"
+      ],
+      [
+        "Ġpara",
+        "das"
+      ],
+      [
+        "Ġla",
+        "te"
+      ],
+      [
+        "ĠsoÃ±",
+        "ar"
+      ],
+      [
+        "Ġsegu",
+        "ros"
+      ],
+      [
+        "ĠrÃ¡",
+        "pido"
+      ],
+      [
+        "Ġsab",
+        "ÃŃa"
+      ],
+      [
+        "or",
+        "re"
+      ],
+      [
+        "orre",
+        "os"
+      ],
+      [
+        "al",
+        "go"
+      ],
+      [
+        "Ġint",
+        "ernet"
+      ],
+      [
+        "end",
+        "rÃŃa"
+      ],
+      [
+        "Ġv",
+        "endrÃŃa"
+      ],
+      [
+        "t",
+        "al"
+      ],
+      [
+        "i",
+        "ert"
+      ],
+      [
+        "j",
+        "ar"
+      ],
+      [
+        "Ġl",
+        "ÃŃmi"
+      ],
+      [
+        "Ġde",
+        "jar"
+      ],
+      [
+        "ch",
+        "as"
+      ],
+      [
+        "Ġdesp",
+        "iert"
+      ],
+      [
+        "Ġr",
+        "ui"
+      ],
+      [
+        "Ġsalta",
+        "r"
+      ],
+      [
+        "ĠlÃŃmi",
+        "te"
+      ],
+      [
+        "Ġdespiert",
+        "as"
+      ],
+      [
+        "Ġrui",
+        "dos"
+      ],
+      [
+        "g",
+        "as"
+      ],
+      [
+        "i",
+        "gas"
+      ],
+      [
+        "Ġtra",
+        "igas"
+      ],
+      [
+        "d",
+        "era"
+      ],
+      [
+        "Ġmejor",
+        "e"
+      ],
+      [
+        "Ġmo",
+        "dera"
+      ],
+      [
+        "triste",
+        "za"
+      ],
+      [
+        "Ġmodera",
+        "da"
+      ],
+      [
+        "f",
+        "e"
+      ],
+      [
+        "ÃŃ",
+        "r"
+      ],
+      [
+        "i",
+        "er"
+      ],
+      [
+        "Ġc",
+        "ier"
+      ],
+      [
+        "ra",
+        "n"
+      ],
+      [
+        "Ġso",
+        "los"
+      ],
+      [
+        "Ġcier",
+        "ran"
+      ],
+      [
+        "Ġbuen",
+        "as"
+      ],
+      [
+        "g",
+        "ue"
+      ],
+      [
+        "Ġsi",
+        "gue"
+      ],
+      [
+        "Ġmi",
+        "rando"
+      ],
+      [
+        "Ġsue",
+        "Ã±a"
+      ],
+      [
+        "Ġguar",
+        "da"
+      ],
+      [
+        "Ġbon",
+        "ito"
+      ],
+      [
+        "er",
+        "mos"
+      ],
+      [
+        "Ġh",
+        "ermos"
+      ],
+      [
+        "Ġba",
+        "i"
+      ],
+      [
+        "Ġol",
+        "vi"
+      ],
+      [
+        "Ġhermos",
+        "o"
+      ],
+      [
+        "l",
+        "ÃŃtica"
+      ],
+      [
+        "Ġpo",
+        "lÃŃtica"
+      ],
+      [
+        "Ġcu",
+        "alquier"
+      ],
+      [
+        "qui",
+        "Ã©n"
+      ],
+      [
+        "Ġta",
+        "reas"
+      ],
+      [
+        "Ġpregu",
+        "nt"
+      ],
+      [
+        "Ġdevuel",
+        "to"
+      ],
+      [
+        "Ġinteres",
+        "es"
+      ],
+      [
+        "Ġcu",
+        "ri"
+      ],
+      [
+        "Ġvuel",
+        "vo"
+      ],
+      [
+        "s",
+        "as"
+      ],
+      [
+        "st",
+        "ra"
+      ],
+      [
+        "sta",
+        "d"
+      ],
+      [
+        "ci",
+        "ente"
+      ],
+      [
+        "Ġami",
+        "stad"
+      ],
+      [
+        "fi",
+        "ciente"
+      ],
+      [
+        "Ġsu",
+        "ficiente"
+      ],
+      [
+        "Ġnue",
+        "stra"
+      ],
+      [
+        "Ġpien",
+        "sas"
+      ],
+      [
+        "st",
+        "osa"
+      ],
+      [
+        "qui",
+        "to"
+      ],
+      [
+        "Ġpo",
+        "quito"
+      ],
+      [
+        "Ġchi",
+        "stosa"
+      ],
+      [
+        "t",
+        "er"
+      ],
+      [
+        "Ġg",
+        "ente"
+      ],
+      [
+        "Ġli",
+        "ter"
+      ],
+      [
+        "Ġliter",
+        "almente"
+      ],
+      [
+        "Ġre",
+        "des"
+      ],
+      [
+        "Ġtar",
+        "daste"
+      ],
+      [
+        "u",
+        "t"
+      ],
+      [
+        "Ġrecuer",
+        "das"
+      ],
+      [
+        "v",
+        "en"
+      ],
+      [
+        "Ġpreocupa",
+        "ba"
+      ],
+      [
+        "bien",
+        "ven"
+      ],
+      [
+        "bienven",
+        "ida"
+      ],
+      [
+        "Ġca",
+        "ra"
+      ],
+      [
+        "Ġen",
+        "ferma"
+      ],
+      [
+        "Ġme",
+        "ta"
+      ],
+      [
+        "vi",
+        "rtual"
+      ],
+      [
+        "Ġre",
+        "al"
+      ],
+      [
+        "p",
+        "lo"
+      ],
+      [
+        "Ġju",
+        "sto"
+      ],
+      [
+        "plo",
+        "ra"
+      ],
+      [
+        "Ġd",
+        "ando"
+      ],
+      [
+        "v",
+        "ida"
+      ],
+      [
+        "Ġp",
+        "ens"
+      ],
+      [
+        "ah",
+        "ÃŃ"
+      ],
+      [
+        "Ġhab",
+        "ÃŃas"
+      ],
+      [
+        "Ġol",
+        "vida"
+      ],
+      [
+        "Ġpens",
+        "Ã©"
+      ],
+      [
+        "Ġolvida",
+        "do"
+      ],
+      [
+        "Ġrecib",
+        "ido"
+      ],
+      [
+        "Ġch",
+        "iste"
+      ],
+      [
+        "Ġex",
+        "pres"
+      ],
+      [
+        "Ġexpres",
+        "ar"
+      ],
+      [
+        "Ġc",
+        "orreos"
+      ],
+      [
+        "Ġalegra",
+        "n"
+      ],
+      [
+        "g",
+        "in"
+      ],
+      [
+        "Ġ",
+        "ima"
+      ],
+      [
+        "Ġaburri",
+        "do"
+      ],
+      [
+        "gin",
+        "o"
+      ],
+      [
+        "Ġima",
+        "gino"
+      ],
+      [
+        "x",
+        "elado"
+      ],
+      [
+        "Ġpi",
+        "xelado"
+      ],
+      [
+        "Ġ",
+        "hola"
+      ],
+      [
+        "ĠextraÃ±",
+        "Ã©"
+      ],
+      [
+        "e",
+        "ten"
+      ],
+      [
+        "m",
+        "or"
+      ],
+      [
+        "Ġa",
+        "mor"
+      ],
+      [
+        "Ġd",
+        "arÃŃa"
+      ],
+      [
+        "ent",
+        "ras"
+      ],
+      [
+        "Ġmi",
+        "entras"
+      ],
+      [
+        "Ġcomp",
+        "eten"
+      ],
+      [
+        "Ġda",
+        "rte"
+      ],
+      [
+        "Ġcompeten",
+        "cia"
+      ],
+      [
+        "Ġt",
+        "ien"
+      ],
+      [
+        "Ġtien",
+        "e"
+      ],
+      [
+        "Ġbuen",
+        "os"
+      ],
+      [
+        "c",
+        "ans"
+      ],
+      [
+        "Ġcal",
+        "ient"
+      ],
+      [
+        "Ġcal",
+        "idad"
+      ],
+      [
+        "Ġpo",
+        "cos"
+      ],
+      [
+        "Ġpon",
+        "en"
+      ],
+      [
+        "Ġcalient",
+        "an"
+      ],
+      [
+        "Ġfe",
+        "chas"
+      ],
+      [
+        "p",
+        "o"
+      ],
+      [
+        "Ġde",
+        "jo"
+      ],
+      [
+        "ar",
+        "go"
+      ],
+      [
+        "Ġenc",
+        "argo"
+      ],
+      [
+        "Ġpue",
+        "de"
+      ],
+      [
+        "Ġinteres",
+        "a"
+      ],
+      [
+        "a",
+        "ventura"
+      ],
+      [
+        "p",
+        "eque"
+      ],
+      [
+        "peque",
+        "Ã±a"
+      ],
+      [
+        "ec",
+        "ÃŃ"
+      ],
+      [
+        "fe",
+        "li"
+      ],
+      [
+        "Ġc",
+        "laro"
+      ],
+      [
+        "Ġha",
+        "go"
+      ],
+      [
+        "Ġdi",
+        "ste"
+      ],
+      [
+        "ci",
+        "endo"
+      ],
+      [
+        "Ġd",
+        "Ã³n"
+      ],
+      [
+        "ta",
+        "da"
+      ],
+      [
+        "ĠdÃ³n",
+        "de"
+      ],
+      [
+        "Ġproblem",
+        "a"
+      ],
+      [
+        "ub",
+        "ori"
+      ],
+      [
+        "Ġescuchar",
+        "lo"
+      ],
+      [
+        "Ġr",
+        "ubori"
+      ],
+      [
+        "pare",
+        "ce"
+      ],
+      [
+        "Ġrubori",
+        "zan"
+      ],
+      [
+        "d",
+        "ando"
+      ],
+      [
+        "Ġdi",
+        "gi"
+      ],
+      [
+        "Ġdigi",
+        "tal"
+      ],
+      [
+        "Ġe",
+        "le"
+      ],
+      [
+        "gi",
+        "rme"
+      ],
+      [
+        "Ġele",
+        "girme"
+      ],
+      [
+        "li",
+        "enta"
+      ],
+      [
+        "Ġso",
+        "Ã±o"
+      ],
+      [
+        "ĠsoÃ±o",
+        "lienta"
+      ],
+      [
+        "Ġdul",
+        "ce"
+      ],
+      [
+        "a",
+        "ya"
+      ],
+      [
+        "Ġv",
+        "aya"
+      ],
+      [
+        "b",
+        "ro"
+      ],
+      [
+        "Ġcere",
+        "bro"
+      ],
+      [
+        "Ġsimp",
+        "le"
+      ],
+      [
+        "n",
+        "os"
+      ],
+      [
+        "Ġv",
+        "emos"
+      ],
+      [
+        "n",
+        "qui"
+      ],
+      [
+        "Ġso",
+        "lo"
+      ],
+      [
+        "Ġtra",
+        "nqui"
+      ],
+      [
+        "Ġex",
+        "iste"
+      ],
+      [
+        "Ġtranqui",
+        "la"
+      ],
+      [
+        "i",
+        "Ã³s"
+      ],
+      [
+        "k",
+        "s"
+      ],
+      [
+        "n",
+        "ac"
+      ],
+      [
+        "Ġs",
+        "nac"
+      ],
+      [
+        "Ġad",
+        "iÃ³s"
+      ],
+      [
+        "Ġguarda",
+        "do"
+      ],
+      [
+        "Ġsnac",
+        "ks"
+      ],
+      [
+        "enta",
+        "da"
+      ],
+      [
+        "Ġcolor",
+        "es"
+      ],
+      [
+        "si",
+        "eron"
+      ],
+      [
+        "Ġt",
+        "ÃŃmi"
+      ],
+      [
+        "Ġpue",
+        "das"
+      ],
+      [
+        "Ġpu",
+        "sieron"
+      ],
+      [
+        "ĠtÃŃmi",
+        "das"
+      ],
+      [
+        "Ġpa",
+        "res"
+      ],
+      [
+        "Ġv",
+        "as"
+      ],
+      [
+        "Ġto",
+        "m"
+      ],
+      [
+        "g",
+        "alo"
+      ],
+      [
+        "Ġsi",
+        "endo"
+      ],
+      [
+        "qui",
+        "eta"
+      ],
+      [
+        "Ġin",
+        "quieta"
+      ],
+      [
+        "Ġolvi",
+        "des"
+      ],
+      [
+        "p",
+        "latic"
+      ],
+      [
+        "platic",
+        "amos"
+      ],
+      [
+        "n",
+        "co"
+      ],
+      [
+        "ci",
+        "nco"
+      ],
+      [
+        "Ġi",
+        "de"
+      ],
+      [
+        "Ġide",
+        "a"
+      ],
+      [
+        "si",
+        "osa"
+      ],
+      [
+        "Ġan",
+        "siosa"
+      ],
+      [
+        "Ġredon",
+        "da"
+      ],
+      [
+        "ĠextraÃ±",
+        "ar"
+      ],
+      [
+        "n",
+        "a"
+      ],
+      [
+        "ri",
+        "na"
+      ],
+      [
+        "Ġsalta",
+        "rina"
+      ],
+      [
+        "x",
+        "imo"
+      ],
+      [
+        "Ġm",
+        "Ã¡"
+      ],
+      [
+        "abur",
+        "rimiento"
+      ],
+      [
+        "ĠmÃ¡",
+        "ximo"
+      ],
+      [
+        "Ġado",
+        "ro"
+      ],
+      [
+        "Ġpregunt",
+        "ar"
+      ],
+      [
+        "Ġcuri",
+        "osa"
+      ],
+      [
+        "r",
+        "Ã©"
+      ],
+      [
+        "r",
+        "ve"
+      ],
+      [
+        "ent",
+        "rÃ©"
+      ],
+      [
+        "Ġsi",
+        "rve"
+      ],
+      [
+        "ten",
+        "me"
+      ],
+      [
+        "entrÃ©",
+        "tenme"
+      ],
+      [
+        "Ġr",
+        "osa"
+      ],
+      [
+        "Ġha",
+        "ga"
+      ],
+      [
+        "gu",
+        "ien"
+      ],
+      [
+        "Ġal",
+        "guien"
+      ],
+      [
+        "Ġabur",
+        "ro"
+      ],
+      [
+        "est",
+        "o"
+      ],
+      [
+        "g",
+        "ente"
+      ],
+      [
+        "Ġ",
+        "ur"
+      ],
+      [
+        "Ġnecesi",
+        "tas"
+      ],
+      [
+        "Ġur",
+        "gente"
+      ],
+      [
+        "p",
+        "ut"
+      ],
+      [
+        "Ġin",
+        "put"
+      ],
+      [
+        "ba",
+        "stante"
+      ],
+      [
+        "ex",
+        "plora"
+      ],
+      [
+        "explora",
+        "mos"
+      ],
+      [
+        "a",
+        "ble"
+      ],
+      [
+        "n",
+        "ada"
+      ],
+      [
+        "p",
+        "ort"
+      ],
+      [
+        "so",
+        "port"
+      ],
+      [
+        "Ġin",
+        "soport"
+      ],
+      [
+        "Ġinsoport",
+        "able"
+      ],
+      [
+        "n",
+        "esta"
+      ],
+      [
+        "ho",
+        "nesta"
+      ],
+      [
+        "ri",
+        "da"
+      ],
+      [
+        "Ġtar",
+        "des"
+      ],
+      [
+        "abur",
+        "rida"
+      ],
+      [
+        "honesta",
+        "mente"
+      ],
+      [
+        "des",
+        "cans"
+      ],
+      [
+        "descans",
+        "a"
+      ],
+      [
+        "ĠsoÃ±",
+        "aste"
+      ],
+      [
+        "s",
+        "Ã©"
+      ],
+      [
+        "da",
+        "rme"
+      ],
+      [
+        "Ġpa",
+        "rte"
+      ],
+      [
+        "Ġtra",
+        "to"
+      ],
+      [
+        "Ġsentir",
+        "ÃŃa"
+      ],
+      [
+        "Ġcer",
+        "ca"
+      ],
+      [
+        "Ġimport",
+        "a"
+      ],
+      [
+        "Ġdor",
+        "mida"
+      ],
+      [
+        "m",
+        "as"
+      ],
+      [
+        "Ġlla",
+        "mas"
+      ],
+      [
+        "d",
+        "Ã³n"
+      ],
+      [
+        "p",
+        "er"
+      ],
+      [
+        "im",
+        "iento"
+      ],
+      [
+        "re",
+        "ten"
+      ],
+      [
+        "Ġf",
+        "ui"
+      ],
+      [
+        "Ġemocion",
+        "ada"
+      ],
+      [
+        "Ġent",
+        "reten"
+      ],
+      [
+        "per",
+        "dÃ³n"
+      ],
+      [
+        "Ġentreten",
+        "imiento"
+      ],
+      [
+        "sta",
+        "ura"
+      ],
+      [
+        "le",
+        "tada"
+      ],
+      [
+        "Ġre",
+        "staura"
+      ],
+      [
+        "Ġcambi",
+        "ado"
+      ],
+      [
+        "Ġcomp",
+        "letada"
+      ],
+      [
+        "Ġaman",
+        "ecÃŃ"
+      ],
+      [
+        "feli",
+        "cidad"
+      ],
+      [
+        "Ġrestaura",
+        "da"
+      ],
+      [
+        "os",
+        "o"
+      ],
+      [
+        "ci",
+        "oso"
+      ],
+      [
+        "Ġde",
+        "li"
+      ],
+      [
+        "Ġdeli",
+        "cioso"
+      ],
+      [
+        "C",
+        "H"
+      ],
+      [
+        "U",
+        "CH"
+      ],
+      [
+        "en",
+        "aste"
+      ],
+      [
+        "re",
+        "deci"
+      ],
+      [
+        "ĠM",
+        "UCH"
+      ],
+      [
+        "Ġimp",
+        "redeci"
+      ],
+      [
+        "Ġll",
+        "enaste"
+      ],
+      [
+        "ĠMUCH",
+        "A"
+      ],
+      [
+        "Ġimpredeci",
+        "ble"
+      ],
+      [
+        "Ġ",
+        "graci"
+      ],
+      [
+        "or",
+        "as"
+      ],
+      [
+        "Ġh",
+        "oras"
+      ],
+      [
+        "Ġabur",
+        "rÃŃ"
+      ],
+      [
+        "lle",
+        "vo"
+      ],
+      [
+        "Ġgraci",
+        "a"
+      ],
+      [
+        "h",
+        "ÃŃ"
+      ],
+      [
+        "p",
+        "re"
+      ],
+      [
+        "Ġp",
+        "latic"
+      ],
+      [
+        "Ġa",
+        "hÃŃ"
+      ],
+      [
+        "or",
+        "pres"
+      ],
+      [
+        "Ġs",
+        "orpres"
+      ],
+      [
+        "Ġv",
+        "ac"
+      ],
+      [
+        "gu",
+        "nta"
+      ],
+      [
+        "Ġgan",
+        "as"
+      ],
+      [
+        "pre",
+        "gunta"
+      ],
+      [
+        "Ġplatic",
+        "ar"
+      ],
+      [
+        "Ġsorpres",
+        "a"
+      ],
+      [
+        "Ġvac",
+        "ÃŃa"
+      ],
+      [
+        "e",
+        "or"
+      ],
+      [
+        "t",
+        "ura"
+      ],
+      [
+        "Ġp",
+        "eor"
+      ],
+      [
+        "Ġesta",
+        "do"
+      ],
+      [
+        "Ġna",
+        "tura"
+      ],
+      [
+        "Ġnatura",
+        "l"
+      ],
+      [
+        "Ġju",
+        "nto"
+      ],
+      [
+        "i",
+        "rando"
+      ],
+      [
+        "Ġest",
+        "irando"
+      ],
+      [
+        "Ġesta",
+        "ble"
+      ],
+      [
+        "Ġba",
+        "stante"
+      ],
+      [
+        "Ġaleg",
+        "re"
+      ],
+      [
+        "Ġpara",
+        "ron"
+      ],
+      [
+        "di",
+        "ante"
+      ],
+      [
+        "Ġra",
+        "diante"
+      ],
+      [
+        "Ġmi",
+        "ras"
+      ],
+      [
+        "a",
+        "ti"
+      ],
+      [
+        "s",
+        "fec"
+      ],
+      [
+        "z",
+        "me"
+      ],
+      [
+        "Ġs",
+        "ati"
+      ],
+      [
+        "ha",
+        "zme"
+      ],
+      [
+        "Ġre",
+        "ÃŃr"
+      ],
+      [
+        "Ġpo",
+        "drÃŃa"
+      ],
+      [
+        "sfec",
+        "ha"
+      ],
+      [
+        "Ġsati",
+        "sfecha"
+      ],
+      [
+        "a",
+        "ve"
+      ],
+      [
+        "Ġdormi",
+        "ste"
+      ],
+      [
+        "Ġsu",
+        "ave"
+      ],
+      [
+        "ta",
+        "mente"
+      ],
+      [
+        "co",
+        "mida"
+      ],
+      [
+        "Ġex",
+        "ac"
+      ],
+      [
+        "Ġpien",
+        "so"
+      ],
+      [
+        "Ġrecib",
+        "ida"
+      ],
+      [
+        "Ġexac",
+        "tamente"
+      ],
+      [
+        "M",
+        "ochi"
+      ],
+      [
+        "Ġest",
+        "e"
+      ],
+      [
+        "Ġte",
+        "cho"
+      ],
+      [
+        "Ġaleg",
+        "rÃŃa"
+      ],
+      [
+        "f",
+        "ri"
+      ],
+      [
+        "Ġv",
+        "es"
+      ],
+      [
+        "cu",
+        "Ã¡ndo"
+      ],
+      [
+        "Ġsu",
+        "fri"
+      ],
+      [
+        "Ġsufri",
+        "endo"
+      ],
+      [
+        "Ġd",
+        "ue"
+      ],
+      [
+        "Ġdue",
+        "le"
+      ],
+      [
+        "si",
+        "ento"
+      ],
+      [
+        "Ġtu",
+        "vi"
+      ],
+      [
+        "po",
+        "drÃŃa"
+      ],
+      [
+        "Ġtuvi",
+        "era"
+      ],
+      [
+        "si",
+        "ta"
+      ],
+      [
+        "Ġvi",
+        "sita"
+      ],
+      [
+        "perfec",
+        "ta"
+      ],
+      [
+        "Ġha",
+        "ciendo"
+      ],
+      [
+        "Ġbai",
+        "le"
+      ],
+      [
+        "Ġmu",
+        "ch"
+      ],
+      [
+        "Ġmuch",
+        "os"
+      ],
+      [
+        "di",
+        "endo"
+      ],
+      [
+        "Ġpi",
+        "diendo"
+      ],
+      [
+        "Ġd",
+        "entro"
+      ],
+      [
+        "Ġs",
+        "entada"
+      ],
+      [
+        "re",
+        "ll"
+      ],
+      [
+        "Ġest",
+        "rell"
+      ],
+      [
+        "Ġqui",
+        "eta"
+      ],
+      [
+        "Ġcomer",
+        "ÃŃa"
+      ],
+      [
+        "Ġestrell",
+        "as"
+      ],
+      [
+        "do",
+        "me"
+      ],
+      [
+        "Ġmo",
+        "vi"
+      ],
+      [
+        "Ã©n",
+        "dome"
+      ],
+      [
+        "Ġmovi",
+        "Ã©ndome"
+      ],
+      [
+        "re",
+        "ce"
+      ],
+      [
+        "Ġmu",
+        "cha"
+      ],
+      [
+        "Ġpa",
+        "rece"
+      ],
+      [
+        "Ġa",
+        "ventura"
+      ],
+      [
+        "a",
+        "das"
+      ],
+      [
+        "Ġa",
+        "t"
+      ],
+      [
+        "z",
+        "ando"
+      ],
+      [
+        "ste",
+        "zando"
+      ],
+      [
+        "Ġbo",
+        "stezando"
+      ],
+      [
+        "Ġsi",
+        "est"
+      ],
+      [
+        "Ġtom",
+        "ando"
+      ],
+      [
+        "Ġsiest",
+        "ita"
+      ],
+      [
+        "c",
+        "tic"
+      ],
+      [
+        "Ġp",
+        "ra"
+      ],
+      [
+        "ctic",
+        "ando"
+      ],
+      [
+        "Ġpra",
+        "cticando"
+      ],
+      [
+        "i",
+        "r"
+      ],
+      [
+        "Ġmi",
+        "rÃ¡"
+      ],
+      [
+        "Ġre",
+        "galo"
+      ],
+      [
+        "ndo",
+        "te"
+      ],
+      [
+        "Ġsegu",
+        "ir"
+      ],
+      [
+        "ĠmirÃ¡",
+        "ndote"
+      ],
+      [
+        "re",
+        "cuerdo"
+      ],
+      [
+        "Ġcuida",
+        "dos"
+      ],
+      [
+        "Ġve",
+        "z"
+      ],
+      [
+        "Ġprim",
+        "era"
+      ],
+      [
+        "r",
+        "pa"
+      ],
+      [
+        "nt",
+        "al"
+      ],
+      [
+        "Ġa",
+        "c"
+      ],
+      [
+        "ci",
+        "o"
+      ],
+      [
+        "Ġpa",
+        "rpa"
+      ],
+      [
+        "Ġpa",
+        "ntal"
+      ],
+      [
+        "Ġdes",
+        "pa"
+      ],
+      [
+        "de",
+        "ando"
+      ],
+      [
+        "Ġparpa",
+        "deando"
+      ],
+      [
+        "Ġpantal",
+        "la"
+      ],
+      [
+        "Ġdespa",
+        "cio"
+      ],
+      [
+        "Ġtu",
+        "ya"
+      ],
+      [
+        "ci",
+        "ent"
+      ],
+      [
+        "em",
+        "ente"
+      ],
+      [
+        "Ġpa",
+        "cient"
+      ],
+      [
+        "ĠsoÃ±",
+        "ando"
+      ],
+      [
+        "Ġlla",
+        "ma"
+      ],
+      [
+        "Ġpacient",
+        "emente"
+      ],
+      [
+        "o",
+        "si"
+      ],
+      [
+        "ent",
+        "os"
+      ],
+      [
+        "Ġmom",
+        "entos"
+      ],
+      [
+        "Ġro",
+        "dando"
+      ],
+      [
+        "osi",
+        "dad"
+      ],
+      [
+        "ti",
+        "tos"
+      ],
+      [
+        "Ġsal",
+        "titos"
+      ],
+      [
+        "Ġlla",
+        "mo"
+      ],
+      [
+        "Ġc",
+        "ÃŃr"
+      ],
+      [
+        "cu",
+        "los"
+      ],
+      [
+        "Ġvuel",
+        "tas"
+      ],
+      [
+        "ĠcÃŃr",
+        "culos"
+      ],
+      [
+        "ra",
+        "re"
+      ],
+      [
+        "Ġta",
+        "rare"
+      ],
+      [
+        "Ġbaj",
+        "ito"
+      ],
+      [
+        "Ġtarare",
+        "ando"
+      ],
+      [
+        "Ġdi",
+        "ce"
+      ],
+      [
+        "Ġtra",
+        "es"
+      ],
+      [
+        "da",
+        "ba"
+      ],
+      [
+        "Ġesper",
+        "Ã¡ndote"
+      ],
+      [
+        "Ġan",
+        "daba"
+      ],
+      [
+        "o",
+        "h"
+      ],
+      [
+        "v",
+        "in"
+      ],
+      [
+        "vin",
+        "iste"
+      ],
+      [
+        "to",
+        "c"
+      ],
+      [
+        "Ġqui",
+        "Ã©n"
+      ],
+      [
+        "Ġto",
+        "c"
+      ],
+      [
+        "tra",
+        "Ã±a"
+      ],
+      [
+        "Ġex",
+        "traÃ±a"
+      ],
+      [
+        "ĠextraÃ±a",
+        "ba"
+      ],
+      [
+        "Ġpu",
+        "se"
+      ],
+      [
+        "Ġque",
+        "dando"
+      ],
+      [
+        "ec",
+        "ho"
+      ],
+      [
+        "Ġh",
+        "echo"
+      ],
+      [
+        "Ġvisita",
+        "rme"
+      ],
+      [
+        "Ġv",
+        "ida"
+      ],
+      [
+        "di",
+        "a"
+      ],
+      [
+        "Ġcome",
+        "dia"
+      ],
+      [
+        "Ġchi",
+        "stes"
+      ],
+      [
+        "p",
+        "in"
+      ],
+      [
+        "Ġo",
+        "pin"
+      ],
+      [
+        "Ġdu",
+        "das"
+      ],
+      [
+        "Ġpregu",
+        "nto"
+      ],
+      [
+        "Ġopin",
+        "as"
+      ],
+      [
+        "d",
+        "Ã©"
+      ],
+      [
+        "Ġguar",
+        "dÃ©"
+      ],
+      [
+        "m",
+        "aÃ±"
+      ],
+      [
+        "Ġme",
+        "tas"
+      ],
+      [
+        "Ġta",
+        "maÃ±"
+      ],
+      [
+        "Ġsimp",
+        "les"
+      ],
+      [
+        "ĠtamaÃ±",
+        "o"
+      ],
+      [
+        "t",
+        "ito"
+      ],
+      [
+        "ent",
+        "Ã©"
+      ],
+      [
+        "cu",
+        "enta"
+      ],
+      [
+        "Ġsal",
+        "iÃ³"
+      ],
+      [
+        "Ġsal",
+        "tito"
+      ],
+      [
+        "int",
+        "entÃ©"
+      ],
+      [
+        "Ġmal",
+        "a"
+      ],
+      [
+        "r",
+        "u"
+      ],
+      [
+        "z",
+        "Ã³"
+      ],
+      [
+        "Ġc",
+        "ru"
+      ],
+      [
+        "Ġllega",
+        "r"
+      ],
+      [
+        "Ġcru",
+        "zÃ³"
+      ],
+      [
+        "p",
+        "on"
+      ],
+      [
+        "en",
+        "sible"
+      ],
+      [
+        "si",
+        "cos"
+      ],
+      [
+        "ÃŃ",
+        "dos"
+      ],
+      [
+        "ÃŃ",
+        "sicos"
+      ],
+      [
+        "or",
+        "daste"
+      ],
+      [
+        "Ġs",
+        "ensible"
+      ],
+      [
+        "Ġf",
+        "ÃŃsicos"
+      ],
+      [
+        "co",
+        "lor"
+      ],
+      [
+        "Ġten",
+        "ga"
+      ],
+      [
+        "Ġo",
+        "ÃŃdos"
+      ],
+      [
+        "Ġac",
+        "ordaste"
+      ],
+      [
+        "pon",
+        "me"
+      ],
+      [
+        "color",
+        "ida"
+      ],
+      [
+        "T",
+        "a"
+      ],
+      [
+        "m",
+        "ascota"
+      ],
+      [
+        "t",
+        "chi"
+      ],
+      [
+        "Ġ",
+        "Ta"
+      ],
+      [
+        "go",
+        "tchi"
+      ],
+      [
+        "Ġti",
+        "po"
+      ],
+      [
+        "vi",
+        "rte"
+      ],
+      [
+        "Ġser",
+        "virte"
+      ],
+      [
+        "ma",
+        "gotchi"
+      ],
+      [
+        "ĠTa",
+        "magotchi"
+      ],
+      [
+        "s",
+        "ab"
+      ],
+      [
+        "t",
+        "mo"
+      ],
+      [
+        "ri",
+        "tmo"
+      ],
+      [
+        "Ġca",
+        "den"
+      ],
+      [
+        "di",
+        "ta"
+      ],
+      [
+        "Ġredon",
+        "dita"
+      ],
+      [
+        "Ġmue",
+        "vo"
+      ],
+      [
+        "sab",
+        "es"
+      ],
+      [
+        "Ġcaden",
+        "cia"
+      ],
+      [
+        "v",
+        "er"
+      ],
+      [
+        "Ġmo",
+        "ver"
+      ],
+      [
+        "Ġalegra",
+        "ron"
+      ],
+      [
+        "Ġquer",
+        "er"
+      ],
+      [
+        "m",
+        "ori"
+      ],
+      [
+        "s",
+        "on"
+      ],
+      [
+        "im",
+        "ient"
+      ],
+      [
+        "er",
+        "son"
+      ],
+      [
+        "Ġp",
+        "erson"
+      ],
+      [
+        "Ġs",
+        "ent"
+      ],
+      [
+        "al",
+        "idad"
+      ],
+      [
+        "Ġme",
+        "mori"
+      ],
+      [
+        "Ġpo",
+        "ca"
+      ],
+      [
+        "Ġcuerp",
+        "o"
+      ],
+      [
+        "Ġcre",
+        "ciendo"
+      ],
+      [
+        "imient",
+        "os"
+      ],
+      [
+        "Ġperson",
+        "alidad"
+      ],
+      [
+        "Ġsent",
+        "imientos"
+      ],
+      [
+        "Ġmemori",
+        "a"
+      ],
+      [
+        "r",
+        "osa"
+      ],
+      [
+        "Ġl",
+        "le"
+      ],
+      [
+        "Ġes",
+        "os"
+      ],
+      [
+        "Ġha",
+        "bl"
+      ],
+      [
+        "Ġat",
+        "ento"
+      ],
+      [
+        "Ġlle",
+        "vamos"
+      ],
+      [
+        "Ġhabl",
+        "as"
+      ],
+      [
+        "Ġque",
+        "jan"
+      ],
+      [
+        "qui",
+        "tas"
+      ],
+      [
+        "Ġfuncion",
+        "an"
+      ],
+      [
+        "Ġchi",
+        "quitas"
+      ],
+      [
+        "Ġestres",
+        "a"
+      ],
+      [
+        "Ġcambi",
+        "arÃŃa"
+      ],
+      [
+        "Ġto",
+        "dos"
+      ],
+      [
+        "Ġespecial",
+        "mente"
+      ],
+      [
+        "Ġemocion",
+        "adas"
+      ],
+      [
+        "Ġgusta",
+        "n"
+      ],
+      [
+        "en",
+        "er"
+      ],
+      [
+        "en",
+        "ferma"
+      ],
+      [
+        "ra",
+        "cion"
+      ],
+      [
+        "Ġse",
+        "an"
+      ],
+      [
+        "Ġg",
+        "ener"
+      ],
+      [
+        "Ġten",
+        "ido"
+      ],
+      [
+        "Ġvib",
+        "racion"
+      ],
+      [
+        "Ġhay",
+        "as"
+      ],
+      [
+        "Ġpregunt",
+        "as"
+      ],
+      [
+        "Ġgener",
+        "Ã³"
+      ],
+      [
+        "Ġvibracion",
+        "es"
+      ],
+      [
+        "i",
+        "enti"
+      ],
+      [
+        "Ġcal",
+        "ienti"
+      ],
+      [
+        "Ġcalienti",
+        "to"
+      ],
+      [
+        "u",
+        "ro"
+      ],
+      [
+        "Ġf",
+        "ut"
+      ],
+      [
+        "Ġcuri",
+        "osidad"
+      ],
+      [
+        "Ġfut",
+        "uro"
+      ],
+      [
+        "Ġpes",
+        "adas"
+      ],
+      [
+        "Ġdescans",
+        "ar"
+      ],
+      [
+        "e",
+        "zo"
+      ],
+      [
+        "u",
+        "imos"
+      ],
+      [
+        "Ġa",
+        "vent"
+      ],
+      [
+        "Ġt",
+        "ro"
+      ],
+      [
+        "Ġf",
+        "uimos"
+      ],
+      [
+        "Ġha",
+        "ya"
+      ],
+      [
+        "ur",
+        "era"
+      ],
+      [
+        "Ġhab",
+        "ÃŃa"
+      ],
+      [
+        "pi",
+        "ezo"
+      ],
+      [
+        "Ġavent",
+        "urera"
+      ],
+      [
+        "Ġtro",
+        "piezo"
+      ],
+      [
+        "Ġemocion",
+        "ante"
+      ],
+      [
+        "Ġex",
+        "plora"
+      ],
+      [
+        "Ġexplora",
+        "r"
+      ],
+      [
+        "ra",
+        "r"
+      ],
+      [
+        "re",
+        "galo"
+      ],
+      [
+        "Ġde",
+        "fin"
+      ],
+      [
+        "Ġf",
+        "uera"
+      ],
+      [
+        "eso",
+        "rar"
+      ],
+      [
+        "Ġrecuer",
+        "dos"
+      ],
+      [
+        "Ġat",
+        "esorar"
+      ],
+      [
+        "Ġdefin",
+        "e"
+      ],
+      [
+        "p",
+        "rim"
+      ],
+      [
+        "v",
+        "os"
+      ],
+      [
+        "en",
+        "si"
+      ],
+      [
+        "Ġm",
+        "imos"
+      ],
+      [
+        "Ġpara",
+        "da"
+      ],
+      [
+        "Ġint",
+        "ensi"
+      ],
+      [
+        "prim",
+        "era"
+      ],
+      [
+        "Ġintensi",
+        "vos"
+      ],
+      [
+        "si",
+        "Ã³n"
+      ],
+      [
+        "ha",
+        "da"
+      ],
+      [
+        "eres",
+        "ante"
+      ],
+      [
+        "mo",
+        "hada"
+      ],
+      [
+        "in",
+        "Ãº"
+      ],
+      [
+        "Ġal",
+        "mohada"
+      ],
+      [
+        "Ġcont",
+        "inÃº"
+      ],
+      [
+        "int",
+        "eresante"
+      ],
+      [
+        "Ġdeci",
+        "siÃ³n"
+      ],
+      [
+        "Ġtom",
+        "aste"
+      ],
+      [
+        "ĠcontinÃº",
+        "a"
+      ],
+      [
+        "i",
+        "sto"
+      ],
+      [
+        "im",
+        "entada"
+      ],
+      [
+        "Ġal",
+        "imentada"
+      ],
+      [
+        "Ġcont",
+        "Ã¡ndo"
+      ],
+      [
+        "Ġquier",
+        "an"
+      ],
+      [
+        "Ġex",
+        "isto"
+      ],
+      [
+        "Ġbai",
+        "lar"
+      ],
+      [
+        "Ġolvi",
+        "do"
+      ],
+      [
+        "ĠcontÃ¡ndo",
+        "me"
+      ],
+      [
+        "t",
+        "u"
+      ],
+      [
+        "Ġde",
+        "tal"
+      ],
+      [
+        "Ã±",
+        "os"
+      ],
+      [
+        "Ġre",
+        "cuerdo"
+      ],
+      [
+        "Ġsue",
+        "Ã±os"
+      ],
+      [
+        "tu",
+        "ve"
+      ],
+      [
+        "Ġdetal",
+        "les"
+      ],
+      [
+        "vi",
+        "r"
+      ],
+      [
+        "vi",
+        "vir"
+      ],
+      [
+        "gu",
+        "ros"
+      ],
+      [
+        "se",
+        "guros"
+      ],
+      [
+        "p",
+        "ert"
+      ],
+      [
+        "des",
+        "pert"
+      ],
+      [
+        "despert",
+        "adores"
+      ],
+      [
+        "s",
+        "ue"
+      ],
+      [
+        "cans",
+        "ada"
+      ],
+      [
+        "sue",
+        "Ã±o"
+      ],
+      [
+        "j",
+        "uego"
+      ],
+      [
+        "Ġ",
+        "juego"
+      ],
+      [
+        "re",
+        "uniones"
+      ],
+      [
+        "ho",
+        "jas"
+      ],
+      [
+        "gu",
+        "ar"
+      ],
+      [
+        "Ġesp",
+        "ecÃŃ"
+      ],
+      [
+        "fi",
+        "ca"
+      ],
+      [
+        "imp",
+        "uestos"
+      ],
+      [
+        "feli",
+        "z"
+      ],
+      [
+        "guar",
+        "do"
+      ],
+      [
+        "ĠespecÃŃ",
+        "fica"
+      ],
+      [
+        "Ġco",
+        "mb"
+      ],
+      [
+        "int",
+        "ernet"
+      ],
+      [
+        "ina",
+        "ciÃ³n"
+      ],
+      [
+        "Ġcomb",
+        "inaciÃ³n"
+      ],
+      [
+        "Ġal",
+        "gÃºn"
+      ],
+      [
+        "ca",
+        "da"
+      ],
+      [
+        "Ġguarda",
+        "da"
+      ],
+      [
+        "a",
+        "t"
+      ],
+      [
+        "b",
+        "o"
+      ],
+      [
+        "c",
+        "Ã©"
+      ],
+      [
+        "ste",
+        "cÃ©"
+      ],
+      [
+        "Ã±",
+        "al"
+      ],
+      [
+        "Ġcu",
+        "at"
+      ],
+      [
+        "Ġse",
+        "Ã±al"
+      ],
+      [
+        "Ġsegu",
+        "idas"
+      ],
+      [
+        "cont",
+        "raseÃ±as"
+      ],
+      [
+        "bo",
+        "stecÃ©"
+      ],
+      [
+        "Ġcuat",
+        "ro"
+      ],
+      [
+        "Ġra",
+        "ras"
+      ],
+      [
+        "n",
+        "u"
+      ],
+      [
+        "v",
+        "a"
+      ],
+      [
+        "v",
+        "ada"
+      ],
+      [
+        "Ġa",
+        "pa"
+      ],
+      [
+        "Ġb",
+        "ri"
+      ],
+      [
+        "Ġmi",
+        "nu"
+      ],
+      [
+        "Ġsi",
+        "esta"
+      ],
+      [
+        "ri",
+        "osidad"
+      ],
+      [
+        "cu",
+        "riosidad"
+      ],
+      [
+        "ti",
+        "vada"
+      ],
+      [
+        "Ġnue",
+        "va"
+      ],
+      [
+        "ll",
+        "an"
+      ],
+      [
+        "Ġac",
+        "tivada"
+      ],
+      [
+        "Ġapa",
+        "gar"
+      ],
+      [
+        "Ġbri",
+        "llan"
+      ],
+      [
+        "Ġminu",
+        "tos"
+      ],
+      [
+        "Ġa",
+        "go"
+      ],
+      [
+        "Ġpas",
+        "iones"
+      ],
+      [
+        "Ġago",
+        "tada"
+      ],
+      [
+        "end",
+        "er"
+      ],
+      [
+        "ta",
+        "reas"
+      ],
+      [
+        "Ġent",
+        "ender"
+      ],
+      [
+        "l",
+        "ando"
+      ],
+      [
+        "Ġbai",
+        "lando"
+      ],
+      [
+        "re",
+        "des"
+      ],
+      [
+        "pres",
+        "upuestos"
+      ],
+      [
+        "p",
+        "ol"
+      ],
+      [
+        "pol",
+        "ÃŃtica"
+      ],
+      [
+        "fe",
+        "chas"
+      ],
+      [
+        "c",
+        "orreos"
+      ]
+    ]
+  }
+}
