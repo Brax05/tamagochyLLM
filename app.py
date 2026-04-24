@@ -39,9 +39,11 @@ class MochiApp(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("[ MOCHI ]")
-        self.geometry("320x480")       
+        self.overrideredirect(True) 
+        self.geometry("320x480+0+0")       
         self.resizable(False, False)    
         self.configure(bg=BG_MAIN)
+        #self.configure(cursor="none")   
 
         self.engine = MochiEngine()
         self.cat = CatAnimator()
@@ -84,6 +86,33 @@ class MochiApp(tk.Tk):
             fg=FG_GRAY,
         )
         self.state_label.pack(pady=(0, 2))
+
+        # ---- PANEL DE PRUEBA DE ANIMACIONES, SE ELIMINARA DESPUES ----
+        test_frame = tk.Frame(self, bg=BG_MAIN)
+        test_frame.pack(padx=6, pady=(0, 2), fill="x")
+
+        emotions = [
+            ("NEUTRAL", "neutral"), ("SORPRENDIDO", "surprised"), ("FELIZ", "happy"), ("TRISTE", "sad"), ("ENOJADO", "angry"),
+            ("AMOR", "love"), ("GUINO", "wink"), ("CONFUNDIDO", "confused"),
+            ("PRESUMIDO", "smug"), ("NERVIOSO", "nervous"), ("DORMIDO", "sleep"),
+            ("AVERGONZADO", "embarrassed"), ("ENFERMO", "sick"), ("EMOCIONADO", "excited"),
+        ]
+
+        for i, (label, sprite) in enumerate(emotions):
+            btn = tk.Button(
+                test_frame,
+                text=label,
+                font=("Courier New", 6),
+                bg=BG_INPUT,
+                fg=FG_GREEN,
+                relief="flat",
+                command=lambda s=sprite, l=label: self._test_emotion(s, l),
+            )
+            btn.grid(row=i // 4, column=i % 4, padx=1, pady=1, sticky="ew")
+
+        for col in range(4):
+            test_frame.columnconfigure(col, weight=1)
+        # ------------------------------------------
 
         bottom = tk.Frame(self, bg=BG_MAIN)
         bottom.pack(side="bottom", padx=6, pady=(0, 6), fill="x")
@@ -138,6 +167,12 @@ class MochiApp(tk.Tk):
         self.chat_log.tag_configure("user", foreground=FG_CYAN)
         self.chat_log.tag_configure("mochi", foreground=FG_GREEN)
         self.chat_log.tag_configure("system", foreground=FG_GRAY)
+
+    # ---- PANEL DE PRUEBA ----
+    def _test_emotion(self, sprite, label):
+        self.cat.set_mode(sprite)
+        self.state_label.configure(text=f"[ {label} ]")
+    # -------------------------
 
     def _init_pygame_surface(self):
         if not self._pygame_initialized:
